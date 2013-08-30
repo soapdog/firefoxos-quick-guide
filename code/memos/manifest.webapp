@@ -1,0 +1,19 @@
+{
+  "name": "Memos",
+  "version": "1.1",
+  "description": "A simple memo taking app",
+  "launch_path": "/index.html",
+  "permissions": {
+    "storage": {
+      "description": "Required for storing and retrieving notes."
+      }
+  },
+  "developer": {
+    "name": "Andre Garzia",
+    "url": "http://andregarzia.com"
+  },
+  "icons": {
+    "60": "/style/icons/icon_60.png",
+    "128": "/style/icons/icon_128.png"
+  }
+}
