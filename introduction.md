@@ -4,7 +4,7 @@
 
 ![Firefox OS](images/originals/firefox_os_simulator.png)
 
-[Firefox OS](http://www.mozilla.org/pt-BR/firefox/os/) is the new open mobile platform developed by [Mozilla](http://mozilla.org) and its partners. Devices running Firefox OS are already available in many countries and will reach even more countries by the end of this year.
+[Firefox OS](http://www.mozilla.org/firefox/os/) is the new open mobile platform developed by [Mozilla](http://mozilla.org) and its partners. Devices running Firefox OS are already available in many countries and will reach even more countries by the end of this year.
 
 Targeted at developing markets, Firefox OS has the mission to bring the next million people to the web. To achieve this, Firefox OS devices are built to serve as a * great first smartphone* and has competitive prices. Those devices are not to be compared with high end smartphones such as the Apple iPhone 5 and Samsung Galaxy S4, they are built to be an alternative to feature phones so that people using said devices are able to upgrade to a Firefox OS one at an affordable cost and receive a *full smartphone experience*.
 
