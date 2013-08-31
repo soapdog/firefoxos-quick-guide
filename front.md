@@ -2,9 +2,9 @@
 
 # This is a BETA book
 
-This book is being made in an agile way. I will update this book often expanding its contents and revising the current text. Since some APIs are still being implemented by Firefox OS its a good practice to make sure you're reading an up to date version of this book.
+This book is being made in an agile way. I will update this book often expanding its contents and revising the current text. Because some APIs are still being implemented by Firefox OS its a good practice to make sure you're reading an up to date version of this book.
 
-Differently from some other technical authors that try to exclude themselves from the text, here you will find many parts where I express my personal opinion and make decisions that may be different than what other programmers would do. I will try to make it clear when I am giving my opinion and when I am talking facts. Anyway, if there is an error in what I am saying, I will revise the text and update the book.
+Differently from some other technical authors that try to exclude themselves from the text, here you will find many parts where I express my personal opinion and make decisions that may be different from what other programmers would do. I will try to make it clear when I am giving my opinion and when I am talking facts. Anyway, if there is an error in what I am saying, I will revise the text and update the book.
 
 I am writing this book in my spare time and distributing it under a *Creative Commons License* for **free** using [Leanpub](http://leanpub.com). Writing a book requires a lot of work and I would like to dedicate more time in my life for this type of activity. For those that think that this book is useful (or cool) may move the price slider on Leanpub download page from zero to any desired amount to give me some bucks. Those that would rather donate using PayPal, I can receive donations under the *agarzia@mac.com* account. Regardless of donations, you should fill your email on the download form to make sure that once the book is updated you will receive a notice.
 
