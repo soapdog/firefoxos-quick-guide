@@ -1,6 +1,6 @@
-# O Simulador do Firefox OS
+# The Firefox OS Simulator
 
-![Dashboard do Simulador do Firefox OS](images/originals/simulator-dashboard.png)
+![Firefox OS Simulator Dashboard](images/originals/simulator-dashboard.png)
 
 No capítulo [Se Preparando Para Desenvolver Apps Para Firefox OS](#setup) nós instalamos o simulador do Firefox OS, no capítulo [Nosso Primeiro App](#firstapp) utilizamos o simulador para testar o memos, agora vamos aprofundar o nosso conhecimento sobre o mesmo vendo como as tarefas mais comuns são realizadas.
 

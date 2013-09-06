@@ -1,10 +1,10 @@
 {backmatter}
 
-# Apêndice 1: Links úteis
+# Appendix 1: Useful links
 
 * [Mozilla](http://mozilla.org)
-* [Comunidade Mozilla Brasil](http://mozillabrasi.org.br)
-* [Central do Desenvolvedor do Firefox OS](http://marketplace.firefox.com/developers)
-* [Mozilla Developers Network](http://developer.mozilla.org/): Melhor documentação ever!
+* [Mozilla Brasil Community Page](http://mozillabrasi.org.br)
+* [Firefox OS Developer Hub](http://marketplace.firefox.com/developers)
+* [Mozilla Developers Network](http://developer.mozilla.org/): Best documentation ever!
 * [Firefox OS](http://www.mozilla.org/pt-BR/firefox/os/)
-* [Wiki da WebAPI](http://wiki.mozilla.org/WebAPI) 
+* [WebAPI on Mozilla Wiki](http://wiki.mozilla.org/WebAPI) 
