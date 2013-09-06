@@ -35,13 +35,13 @@ This book is written for readers with an intermediate knowledge of HTML, CSS and
 
 Experienced developers will notice that sometimes I don't follow all the good practices in the source code of the examples of this book. Even though I am avoiding anti-patterns in here, I am trying to keep the use of immediate functions and other similar practices to a minimum. The main reason for that is to make the source code beginner friendly since this is an introductory book. Seasoned programmers will know when and how to change things while beginner coders will be able to understand whats is going on. All code here works and as I update this book I may revisit the code and use more and more best practices depending on the readers feedback.
 
-If you want to dive deeper in the world of high quality JavaScript coding here are some good books.
+If you want to dive deeper in the world of high quality JavaScript coding here are some good books:
 
 * [JavaScript: The Good Parts](http://shop.oreilly.com/product/9780596517748.do): The JavaScript Book.
 * [JavaScript Patterns](http://shop.oreilly.com/product/9780596806767.do): Patterns and best practices.
 * [JavaScript Enlightenment](): Advanced JavaScript techniques.
 * [Maintainable JavaScript](http://shop.oreilly.com/product/0636920027713.do): Writing code that is easy to maintain and work with.
-* 
+
 # Feedback & Pull Requests
 
 This is a Free and Open book and I am anxious to receive all feedback that you guys can give me. All the content of the book is at a [GitHub repository](https://github.com/soapdog/firefoxos-quick-guide) and is built using Markdown (with some extensions by Leanpub). To give me feedback, bug fixes and improvements just send me a pull request. Thanks in advance for all contributions.
@@ -55,7 +55,7 @@ This book was originally written in Portuguese and translated by me into English
 * [Portuguese Version](http://leanpub.com/guiarapidofirefoxos): Guia Rápido para Desenvolvimendo para Firefox OS.
 * [English Version](http://leanpub.com/quickguidefirefoxosdevelopment): Quick Guide for Firefox OS App Development.
 
-I welcome help to translate this book to even more languages (and to fix my broken english).
+I welcome all help to translate this book to even more languages (and to fix my broken english).
 
 # Version Changes
 
