@@ -30,33 +30,38 @@ Lets review the fields from the manifest above.
 
 |Field		|Description                                                                        |
 |-----------|-----------------------------------------------------------------------------------|
-|name		|Esse campo dita o nome do aplicativo.                                              |
-|version	|Essa é a versão atual do seu aplicativo. Mudar a versão causa um update no app.    |
-|launch_path|Qual arquivo que deve ser carregado quando o seu app é iniciado                    |
-|permissions|Quais permissões seu app precisa. Mais informações sobre permissões adiante		|
-|developer  |Quem desenvolveu esse aplicativo 													|
-|icons		|Os ícones para cada tamanho necessário 											|
+|name		|This is the application name.		                                                |
+|version	|This is the current version of the app. 										    |
+|launch_path|What file is used to launch your application.					                    |
+|permissions|What permissions your app requests. More information about this below.				|
+|developer  |Who developed this application 													|
+|icons		|The icons used by the app in many different sizes.									|
 
 
 A parte mais interessante desse manifesto é a entrada de permissões onde pedimos a permissão para *storage* que permite que utilizemos o IndexedDB sem limitação de espaço[^storage-permission] (graças a isso podemos armazenar quantas notas quisermos no nosso programa).
 
-[^storage-permission]: Para saber mais sobre as permissões que você pode pedir olhe [a página na MDN sobre permissões de aplicativos](https://developer.mozilla.org/en-US/docs/Web/Apps/App_permissions).
+The most interesting part of this manifest is the permissions field where we ask for the *storage* permission that allows us to use IndexedDB without size restriction[^storage-permission] (thanks to that permission we can store as many notes as we want).
 
-Com o manifesto pronto podemos passar para o HTML.
+[^storage-permission]: To learn more about pemrissions read [the page on MDN about app permissions](https://developer.mozilla.org/en-US/docs/Web/Apps/App_permissions).
 
-## Estruturando o HTML
+Now that the manifest is ready lets move on to the HTML.
 
-Antes de colocarmos a mão na massa e montarmos o HTML utilizado pelo memos vamo falar rapidamente sobre o [Gaia Building Blocks](http://buildingfirefoxos.com/building-blocks) que é uma iniciativa de construir um conjunto de css e js reutilizáveis com o *look and feel* do Firefox OS para você aproveitar nos seus próprios apps.
+## Building the HTML
 
-No Firefox OS, assim como na web em geral, você não é obrigado a utilizar o *look and feel* do Firefox OS. Utilizar ou não os Building Blocks é uma decisão sua que passa por questões de *branding*, conveniência de uso, adequação ao que você precisa entre outras, o importante é entender que você não sofre nenhum tipo de repreensão no Firefox Marketplace por não utilizar a cara do Firefox OS. Eu como não sou um bom designer opto sempre por utilizar um pacote pronto como esse (ou contratar um designer).
+Before getting our hands dirty and crafting out HTML lets take a brief detour to talk quickly about the [Gaia Building Blocks](http://buildingfirefoxos.com/building-blocks) which are a collection of reusable CSS and JS with the *look and feel* of Firefox OS that you can use on your own apps.
 
-A estrutura do HTML do nosso programa foi construída para se adequar aos padrões adotados pelo Gaia Building Blocks onde cada tela é uma *section* e os elementos seguem uma formulazinha. O ideal agora é que você baixe o código fonte do Memos a partir do [meu Github](https://github.com/soapdog/memos-for-firefoxos) para que você tenha os arquivos do Building Blocks.
+Just like in the World Wide Web you're not required to use the *look and feel* of Firefox OS on your app. Using or not using the Gaia Building Blocks is a personal decision that has implications for branding, convenience, usefulness for your own project and more. The important thing to understand is that your app will not suffer any type of prejudice or penalty on the Firefox Marketplace by not using the Gaia look and feel. I am using it here because I am not a good designer so ready made UI toolkits appeal to me (its that or hiring a designer).
 
-W> Aviso: A versão que eu usei do Building Blocks não é a atual e eu modifiquei alguns arquivos portanto o código que vamos mostrar só vai funcionar com a versão que está no repositório do Memos.
+The HTML structure that we use in this program was built following the patterns adopted by the Gaia Building Blocks where each screen is a `<SECTION>` and the elements follow a predefined format. The ideal way of going on now is to download the source code from the [memos repository]
+(https://github.com/soapdog/memos-for-firefoxos) so that you have the Building Blocks available for use.
 
-### Incluíndo os Building Blocks
+W> Warning: The Building Blocks version I used is not the current one and I've changed the original files so do not download the current version from their website and use the one provided on the Memos repository for this chapter (In the real world, use the version from their site).
 
-Antes de mais nada, copie as pastas **shared** e **style** para a pasta Memos para que possamos utilizar o Building Blocks. Vamos começar o nosso arquivo **index.html** com os *includes* necessários para o programa.
+### Including the Building Blocks
+
+Antes de mais nada, copie as pastas **shared** e **style** para a pasta Memos para que possamos utilizar o Building Blocks. Vamos começar o nosso arquivo **index.html** com os *includes* necessários para o programa
+
+Before doing anything else copy the **shared** and the **styles** folder to the **memos** folder so that we can use the Building Blocks in our app. Lets begin our **index.html** files by including the needed bits.
 
 ~~~~~~~~
 <!DOCTYPE html>
