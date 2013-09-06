@@ -1,32 +1,34 @@
-#  Nosso Primeiro App {#firstapp}
+# Our First App {#firstapp}
 
-![Memos, um bloco de notas minimalista](images/originals/memos-app.png)
+![Memos, a minimalist notepad app](images/originals/memos-app.png)
 
-Nesse capítulo vamos reconstruir o aplicativo **Memos** que é um bloco de notas que eu criei para servir de exemplo em minhas palestras. Esse programa possui três telas. A primeira está acima e é a tela principal do programa que lista os títulos das notas. Ao clicar em uma dessas notas ou clicar no sinal de adição somos direcionados para a tela de edição onde podemos alterar o título e conteúdo da nota como pode ser visto abaixo:
+In this chapter we're going to rebuild the **Memos** application which is a note taking application I built to use an example in my talks. This app has three screens. The first is the main screen and has a list of your notes. When you click a note (or add a new one) you're moved to the detail screen that allows you to edit the content and title of the given note as we can see in the shot below.
 
-![Memos, tela de edição](images/originals/memos-editing-screen.png)
+![Memos, editing screen](images/originals/memos-editing-screen.png)
 
-Nesta tela de edição o usuário pode também deletar a nota sendo mostrada ao clicar no ícone da lixeira e confirmar o desejo de deletar a nota como a captura de tela mostrada a seguir.
+On the screen shown above the user can choose to delete the selected note by clicking on the trash icon. This will cause a confirmation screen to show as we can see in the following screen.
 
-![Memos, confirmar a remoção de uma nota](images/originals/memos-delete-screen.png)
+![Memos, note removal confirmation screen](images/originals/memos-delete-screen.png)
 
-O código do Memos está disponível no [meu Github](https://github.com/soapdog/memos-for-firefoxos) para quem quiser baixar e olhar logo tudo de uma vez. Existe uma cópia do código do app na pasta **code** dentro do [repositório do livro](https://github.com/soapdog/guia-rapido-firefox-os) que contém o código fonte em Markdown utilizado para gerar esse livro.
+The source code for Memos is available at [my Github Repo](https://github.com/soapdog/memos-for-firefoxos) and it is better to fetch it to understand this chapter by exploring all files. Another copy of the source code is available on the **code** folder inside the [github repository for this book](https://github.com/soapdog/firefoxos-quick-guide).
 
-O Memos utiliza [IndexedDB](https://developer.mozilla.org/en-US/docs/IndexedDB/Using_IndexedDB) para armazenar as notas e o [Gaia Building Blocks](http://buildingfirefoxos.com/building-blocks) para a construção da sua interface. Em uma atualização futura deste livro eu falarei mais sobre os building blocks, nesta primeira versão simplesmente construiremos o app.
+Memos uses [IndexedDB](https://developer.mozilla.org/en-US/docs/IndexedDB/Using_IndexedDB) to store the notes and the [Gaia Building Blocks](http://buildingfirefoxos.com/building-blocks) to build the interface. In a future update to this book I will talk more about the building blocks but on this first version I am just going to use them and you can check the link above to learn more about it.
 
-O primeiro passo é separarmos uma pasta para o aplicativo. Vamos chamar a pasta de **memos**.
+The first step is to create a folder for the application, lets call this folder **memos**.
 
-## Criando o manifesto
+## Creating the manifest
 
-O manifesto do Memos é bem simples. Crie um arquivo chamado **manifest.webapp** no a pasta **memos**. Manifestos são arquivos do tipo [JSON](http://json.org) que descrevem um aplicativo nele colocamos o nome, a descrição, os ícones utilizados e muitas outras coisas importantes como quais permissões o programa necessita para funcionar e qual arquivo é utilizado para carregar o app.
+Memos manifest is pretty simple. Create a file named **manifest.webapp** on the **memos** folder. Manifests are [JSON](http://json.org) files that describes an application. In this file we place things such as the name of the app, who the developer is, what icons are used, what file is used to launch the app, what hardware access permission it needs and more.
 
 Abaixo podemos ver o conteúdo do manifesto do Memos, atenção ao copiar pois é fácil errar uma vírgula e tornar o seu JSON inválido. Para validar o seu JSON você pode utilizar várias ferramentas, uma delas que é especifica para validação de manifestos que é o [http://appmanifest.org/](http://appmanifest.org/). Para aprender mais sobre manifestos visite [a página na MDN sobre manifestos](https://developer.mozilla.org/pt-BR/docs/Apps/Manifest).
 
-<<[Manifesto do programa Memos (*manifest.webapp*)](code/memos/manifest.webapp)
+Below we can see the contents of the Memos app manifest. Attention when copying this data because its very easy to place a comma on the wrong place and create an invalid JSON. There are many tools that you can use to validate JSON files but there is a special one that is built specifically for validating app manifests. You can check out this online tool at [http://appmanifest.org/](http://appmanifest.org/). To learn more about app manifests read [this page on MDN about manifests](https://developer.mozilla.org/docs/Apps/Manifest).
 
-Vamos explicar cada um dos campos do manifesto acima.
+<<[Memos manifest file (*manifest.webapp*)](code/memos/manifest.webapp)
 
-|Campo		|Descrição	                                                                        |
+Lets review the fields from the manifest above.
+
+|Field		|Description                                                                        |
 |-----------|-----------------------------------------------------------------------------------|
 |name		|Esse campo dita o nome do aplicativo.                                              |
 |version	|Essa é a versão atual do seu aplicativo. Mudar a versão causa um update no app.    |
