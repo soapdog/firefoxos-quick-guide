@@ -59,8 +59,6 @@ W> Warning: The Building Blocks version I used is not the current one and I've c
 
 ### Including the Building Blocks
 
-Antes de mais nada, copie as pastas **shared** e **style** para a pasta Memos para que possamos utilizar o Building Blocks. Vamos começar o nosso arquivo **index.html** com os *includes* necessários para o programa
-
 Before doing anything else copy the **shared** and the **styles** folder to the **memos** folder so that we can use the Building Blocks in our app. Lets begin our **index.html** files by including the needed bits.
 
 ~~~~~~~~
@@ -80,11 +78,11 @@ Before doing anything else copy the **shared** and the **styles** folder to the 
 </head>
 ~~~~~~~~
 
-Na *linha 01* declaramos o tipo do documento como sendo HTML 5. Da *linha 05 até a linha 15* incluímos os CSS dos diversos componentes que são utilizados no aplicativo tais como cabeçalhos, listas, áreas de entrada de dados entre outros.
+On *line 01* we declare the DOCTYPE as HTML5. From *line 05 up to 15* we include the CSS from the various components that we're going to use in our app such as headers, lists, text entry fields and more.
 
-### Construíndo a tela principal
+### Building the main screen
 
-Agora podemos passar a implementação das telas. Como falamos anteriormente, cada tela do programa é uma **<section>** dentro do **<body>** do HTML que deve ter um atributo *role* com valor *application* tipo `<body role="application">`. Isso é utilizado pelos seletores dos CSS do Building Blocks. Vamos construír a primeira tela (e declarar o body).
+Now we can start building the various screens. As spoken earlier, each screen used by our app is a `<section>` inside the HTML `<body>`. The body tag must have an attribute *role* with its value equal to *application* because that is used by the CSS selectors to build the interface, so our body tag will be `<body role="application">`. Lets build the first screen and declare our body tag as well.
 
 ~~~~~~~~
 <body role="application">
@@ -100,13 +98,13 @@ Agora podemos passar a implementação das telas. Como falamos anteriormente, ca
 </section>
 ~~~~~~~~
 
-Nossa tela tem um **<header>** que possui um botão para adicionar novas notas e o nome do programa. Possui também um **<article>** que é utilizado para conter a lista de notas armazanadas no app. Nós utilizaremos as IDs do **<article>** e do **botão** para capturar eventos quando chegarmos na parte em JavaScript.
+Our screen has a `<header>` containing a button to add new notes and the application name. The screen also has an `<article>` which will be used to hold the list of stored notes. We're going to use the button and the article IDs to capture events when we reach the JavaScript implementation part.
 
-Repare que a criação da tela é um HTML bem tranquilo de se entender, construir a mesma tela em outras linguagens é muito mais trabalhoso. Simplesmente declaramos nossos componentes e damos IDs para elementos que desejamos referenciar posteriormente. 
+Be aware that each screen is a fairly straight forward HTML chunk. Building these same screens in another languages usually requires a lot more work. All we're doing is declaring our components and giving them IDs when they are controls that we're going to reference later.
 
-Agora que temos a tela principal pronta, vamos montar a tela de edição que é mais complicada.
+Now that the main screen is done, lets build the editing screen that is a bit more complex.
 
-### Montando a tela de edição
+### Building the editing screen
 
 ~~~~~~~~
 <section role="region" id="memo-detail" class="skin-dark hidden">
@@ -145,15 +143,15 @@ Agora que temos a tela principal pronta, vamos montar a tela de edição que é 
 </section>
 ~~~~~~~~
 
-Essa tela de edição contém a tela de diálogo utilizada quando o usuário tenta deletar uma nota por isso ela é mais complicada. 
+The editing screen is a bit more complex because it also holds the dialog box used when the user tries to delete a note.
 
-No topo da tela que é marcado pelo **<header>** temos o botão de voltar para a tela principal, uma caixa de entrada de texto que é utilizada para mostrar e modificar o título da nota e um botão utilizado para enviar a nota por email.
+On the top of the screen (a.k.a the `<header>`) we have a back button to return the main screen, a text entry field that is used to hold the title of the given note and a button that is used to share the note over email.
 
-Depois da toolbar que fica no topo, temos um parágrafo contendo uma área para a entrada de texto da nota e então uma outra toolbar com um botão para deletar a nota que está aberta.
+After the top toolbar we have a paragraph holding a `<textarea>` that is used to hold the content of the note and then another toolbar with a trashcan button used to delete the current note.
 
-Esses três elementos e seus nós filhos formam a tela de edição e após essa tela temos um **<form>** que na verdade representa a caixa de diálogo utilizada pela tela de confirmação da remoção da nota. Essa caixa de diálogo é bem simples contendo uma mensagem informativa e um botão para cancelar a ação de deletar a nota e um para confirmar.
+These three elements and their child nodes contain the editing screen. After them we have a `<form>` that is used as a dialog box containing the confirmation screen that is presented when the user tries to delete a note. This dialog box is pretty easy containing only an information text and two buttons, one for deleting the note and another for canceling the action.
 
-Ao fecharmos essa **<section>** terminamos todas as telas do programa e o restante do código HTML serve apenas para incluir os arquivos de JavaScript utilizados pelo programa.
+Now that we're closing this `<section>` we have all our screens implemented and the remaining HTML code is only there to include the JavaScript files and close the html file.
 
 ~~~~~~~~
 <script src="/js/model.js"></script>
@@ -162,7 +160,7 @@ Ao fecharmos essa **<section>** terminamos todas as telas do programa e o restan
 </html>
 ~~~~~~~~
 
-## Construíndo o JavaScript
+## Crafting the JavaScript code
 
 Agora vamos programar de verdade e dar vida ao nosso app. Para efeitos de organização separei o código em dois arquivos de JavaScript:
 
