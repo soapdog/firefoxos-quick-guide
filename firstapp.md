@@ -465,27 +465,29 @@ Now all files are ready and we can begin trying our application on the simulator
 
 ## Testing the app on the simulador
 
-Antes de testarmos o aplicativo no simulador é melhor garantirmos que todos os arquivos estão no lugar certo. Sua pasta deve se parecer com essa aqui:
+Before we try our application on the simulator we'd better check out if the files are in the correct place. Your memos folder should look like this one:
 
-![Lista de arquivos do Memos](images/originals/memos-file-list.png)
+![List of files used by Memos](images/originals/memos-file-list.png)
 
 Se você desconfia que pode haver algo errado com o que você digitou basta comparar sua versão com a que está no [meu GitHub](https://github.com/soapdog/memos-for-firefoxos) (Existe uma cópia do código do app na pasta **code** dentro do [repositório do livro](https://github.com/soapdog/guia-rapido-firefox-os) ).
 
-Para abrir o *Dashboard do Simulator* vá no menu **Ferramentas -> Desenvolvedor Web -> Firefox OS Simulator**.
+If you have a hunch that you wrote something wrong, just compare your version with the one on [the memos github repository](https://github.com/soapdog/memos-for-firefoxos) (There is also a copy of the source code in a folder called **code** on the [book repository](https://github.com/soapdog/guia-rapido-firefox-os) ).
 
-![Como abrir o dashboard do simulador](images/originals/tools-web-developer-simulator.png)
+To open the *Simulator Dashboard* go to the menu for **Tools -> Web Developer -> Firefox OS Simulator**.
 
-Com o dashboard aberto, clique no botão **Add Directory** e navegue até a pasta do código fonte do Memos e selecione o arquivo de manifesto.
+![How to open simulator dashboard](images/originals/tools-web-developer-simulator.png)
 
-![Adicionando um novo aplicativo](images/originals/simulator-add-directory.png)
+With the dashboard open, click the **Add Directory** button and browse to where you placed the memos files and select the app manifest.
 
-Se tudo funcionar corretamente você vera o aplicativo Memos na lista de apps.
+![Adding a new app](images/originals/simulator-add-directory.png)
 
-![Memos aparecendo no dashboard](images/originals/memos-on-dashboard-display.png)
+If everything works as expected you will see the Memos app on the list of apps.
 
-Ao adicionar o app, o simulador ligará automaticamente com o app aberto para você testar. Pronto, você ja pode testar as funcionalidades do Memos. Parabéns você criou e testou seu primeiro app. Não é um app complexo ou revolucionário mas te ajudou a entender o *workflow* de desenvolvimento. Lembre-se sempre que você alterar o código fonte do aplicativo, você deve apertar o botão **Refresh** para atualizar a cópia que está instalada no simulador.
+![Memos showing on the dashboard](images/originals/memos-on-dashboard-display.png)
 
-## Conclusão
+When you add a new application the simulator launches with your new app running so that you can test it. Now you can test all the features for Memos. Congratulations you created and tested you first app. Its not a complex or revolutionary app but helped you understand the development workflow. Remember that whenever you alter some of the source files you need to press the **Refresh** button to update the copy of the app that is stored on the simulator.
 
-Parabéns você construiu seu primeiro aplicativo móvel para Firefox OS e testou ele no simulador. No próximo capítulo apresentaremos as ferramentas do desenvolvedor que irão facilitar a sua vida na hora de programar.
+## Summary
+
+Congratulations you've built your first mobile application for Firefox OS and tested it on the simulator. On the next chapter we're going to check out the developer tools that comes bundled with Firefox and will make your life a lot easier.
 
