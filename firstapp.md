@@ -162,20 +162,20 @@ Now that we're closing this `<section>` we have all our screens implemented and 
 
 ## Crafting the JavaScript code
 
-Agora vamos programar de verdade e dar vida ao nosso app. Para efeitos de organização separei o código em dois arquivos de JavaScript:
+Now we're going to start coding for real and give life to our app. To better organize this code, I've divided the JavaScript code in two files:
 
-* **model.js:** que contém as rotinas para lidar com o armazenamento e alteração das notas porém não contém a lógica do programa ou algo relacionado a sua interface e tratamento de entrada de dados.
-* **app.js:** responsável por ligar os elementos do HTML às rotinas correspondentes e contém a lógica do app.
+* **model.js:** contains the routines to deal with storage and retrieval of notes but does not contain app logic or anything related to the interface or data entry.
+* **app.js:** attaches the HTML elements with their event handlers and contains the app logic.
 
-Os dois arquivos devem ser postos em uma pasta chamada **js** ao lado das pastas **style** e **shared**.
+Both files should be placed inside a **js** folder next to the **style** and **shared** folders.
 
 ### model.js
 
-No Firefox OS utilizaremos o [IndexedDB](https://developer.mozilla.org/en-US/docs/IndexedDB/Using_IndexedDB) para guardar as notas. Como pedimos a permissão de *storage* podemos grava quantas notas a memória do aparelho permitir.
+We're going to use [IndexedDB](https://developer.mozilla.org/en-US/docs/IndexedDB/Using_IndexedDB) to store our notes. Since we asked the *storage* permission on the app manifest we can store as many notes as we want (a.k.a. until de device runs out of memory).
 
-A parte do código do model.js que mostrarei abaixo é responsável por abrir a conexão e criar o *storage* se necessário.
+The part of the code from *model.js* that is shown below is responsible for open the connection and creating the storage.
 
-A> Importante: Esse código foi escrito para ser entendido facilmente e não representa as melhores práticas de programação para JavaScript. Variáveis globais são utilizadas (ARGH!) entre outros problemas. Fora isso o tratamento de erros é basicamente inexistente. O mais importante desse livro é ensinar o *worlflow* de como programar apps para Firefox OS.
+A> Important: This code was written to be understood easily and does not represent the best practices for JS programming. Some global variables are used (I'm so going to hell for this) among other tidbits. The error handling code is basically non-existant. The main objective of this book is to teach the *workflow* of developing apps for Firefox OS and not teaching best JS patterns. That being said, depending on feedback, I will update the code in this book to better reflect best practices if enough people think it will not impact the beginners.
 
 ~~~~~~~
 var dbName = "memos";
@@ -220,13 +220,13 @@ request.onupgradeneeded = function (event) {
 }
 ~~~~~~~
 
-A> Importante: Novamente me perdoem pelas variáveis globais, isso aqui é um app educativo apenas. Outro detalhe é que eu removi os comentários dos código colados no livro para economizar espaço. O código fonte no github está comentado.
+A> Important: Forgive me again for the globals, this is an educational resource only. Another details is that I removed the comments from the source code to save space in the book. If you pick the source from GitHub you will get all the comments.
 
-O código acima cria um objeto *db* e um objeto *request*. O objeto *db* é utilizado por outras funções no código para manipular o registro das notas.
+The code above created a *db* object and a *request* object. The *db* object is used by other functions in the source to manipulate the notes storage.
 
-Na implementação da função `request.onupgradeneeded` aproveitamos para criar uma nota de exemplo desta forma assim que o programa liga pela primeira vez e essa função é executada, o banco de dados é inicializado com uma nota de boas vindas.
+On the implementation of the `request.onupgradeneeded` function we also create a welcome note. This function is executed when the application runs for the first time (or when the db version changes). This way once the application launches for the first time, the database is initialized with a single welcome note.
 
-Com nossa conexão aberta e armazenamento inicializado é hora de implementar as funções para manipulação das notas.
+With our connection open and the storage initialized its time to implement the basic functions for note manipulation.
 
 ~~~~~~~~
 function Memo() {
@@ -289,15 +289,15 @@ function deleteMemo(inId, inCallback) {
 }
 ~~~~~~~~
 
-Acima criamos uma função construtora para montar novas notas já com alguns campos inicializados. A seguir implementamos funções para listar, salvar e remover as notas. Essas funções em geral sempre aceitam um parametro `inCallback` que é uma função de retorno para ser executada após o processamento da função. Isso é necessário dada a natureza assíncrona das chamadas ao IndexedDB. Todas as callbacks tem a mesma assinatura que é `callback(error, value)` onde um dos valores é nulo dependendo do que aconteceu.
+On the piece of code above we create a constructor function that creates new Memos with some fields already initialized. After that we implement functions for listing, saving and removing notes. Many of these functions receive a callback parameter called `inCallback` which is a function to be called after the function does its thing. This is needed due to the asynchronous nature of IndexedDB. All callbacks have the same signature which is `callback(error, value)` where one of the values is null depending on what happened.
 
-A> Como esse é um livro de caráter introdutório eu optei por não utilizar [*Promises*](https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise) visto que muitos desenvolvedores ainda não estão familiarizados com o conceito. Eu recomendo fortemente a utilização desse tipo de solução que torna o código mais legível e fácil de manter.
+A> Since this is a beginner book I've opted not to use [*Promises*](https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise) since many beginners are not familiar with the concept. I recommend with all my heart using such concepts to create easier to maintain code that is more pleasant to read.
 
-Com nossas funções para o armazenamento e manipulação de notas prontas vamos agora implementar a lógica da nossa app no arquivo **app.js**
+Now that our note storage and manipulation functions are ready lets implement our app logic in a file called **app.js**.
 
 ### app.js
 
-Esse arquivo contém a nossa lógica do programa. Como o código é grande demais para colocar todo de uma vez só vou quebra-lo em partes e colocar aos pouquinhos.
+This file will contain our app logic. Since the source code is to large for me to place it all at once on the book, I will break it in parts and explain each part piece by piece.
 
 ~~~~~~~~
 var listView, detailView, currentMemo, deleteMemoDialog;
