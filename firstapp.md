@@ -347,15 +347,15 @@ function newMemo() {
 }
 ~~~~~~~~
 
-Primeiro declaramos algumas variáveis globais para armazenar umas referências a alguns elementos que pretendemos utilizar dentro das funções. Das variáveis globais, a mais interessante é `currentMemo` que é um objeto que guarda qual nota o usuário está vendo.
+At the beginning we declare some global variables (yuk!!!) to hold references to some DOM Elements that we want to use later inside some functions. The most interesting global is `currentMemo` which is an object that holds the current note that the user is reading.
 
-As funções `showMemoDetail()` e `displayMemo()` funcionam juntas, a primeira carrega a nota escolhida em `currentMemo` e manipula o CSS dos elementos para que a tela de visualização/edição seja mostrada e a segunda se encarrega de pegar o conteúdo de `currentMemo` e adicionar a tela. Dava para fazer as duas coisas dentro de uma função só mas quando eu estava experimentando com esse app eu separei as funções para que a inserção do conteúdo da nota na interface ficasse separado da manipulação das telas, desta forma eu pude brincar mais com variações das funções.
+The `showMemoDetail()` and `displayMemo()` functions work together. The first one loads the selected note into the `currentMemo` and manipulates the CSS of the elements so that the editing screen is shown. The second one picks the content from the `currentMemo` variable and places it on the screen. We could do both things on the same function but having them separate makes it easier to experiment with new implementations.
 
-A função `shareMemo()` utiliza uma [WebActivity](https://hacks.mozilla.org/2013/01/introducing-web-activities/) para criar uma nova mensagem no programa de email com o conteúdo da nota.
+The `shareMemo()` function uses a [WebActivity](https://hacks.mozilla.org/2013/01/introducing-web-activities/) to open the email application with a new message pre-filled with the selected notes content. 
 
-A função `textChanged()` pega os dados dos campos de entrada e coloca novamente em `currentMemo` e então salva a nota. Isso é feito pois a idéia do programa é que o usuário nunca precise explicitamente salvar uma nota. Toda alteração nas caixas de entrada de texto causam a execução dessa rotina e a atualização da nota no banco de dados.
+The `textChanged()` function picks the data from the entry fields and place them into the `currentMemo` object and then saves the note. This is done because the application is an `auto-save` app where your content is always saved. All alterations on the content or title of the note will trigger this function and the note will always be saved on the IndexedDB storage.
 
-A função `newMemo()` cria uma nova nota e abre a tela de edição para ela.
+The `newMemo()` function creates a new note and opens the editing screen with it.
 
 ~~~~~~~~
 function requestDeleteConfirmation() {
@@ -384,11 +384,11 @@ function showMemoList() {
 }
 ~~~~~~~~
 
-A função `requestDeleteConfirmation()` é responsável por mostrar a tela de confirmação de remoção de nota.
+The `requestDeleteConfirmation()` function is responsible for showing the note removal confirmation dialog.
 
-As funções `closeDeleteMemoDialog()` e `deleteCurrentMemo()` são acionadas pelos botões de cancelamento e de confirmação de remoção da nota.
+The `closeDeleteMemoDialog()` and `deleteCurrentMemo()` are triggered by the buttons on the removal confirmation dialog.
 
-A função `showMemoList()` faz a faxina antes de mostrar a lista de notas pois limpa o valor de `currentMemo` afinal se estamos vendo a lista de notas então não estamos vendo nenhuma nota e faz com que a tela principal seja mostrada.
+The `showMemoList()` function does some clean up before showing the list of stored notes. For example, it cleans the content of `currentMemo` since we're not reading any memo yet.
 
 ~~~~~~~~
 function refreshMemoList() {
@@ -434,9 +434,9 @@ function refreshMemoList() {
 }
 ~~~~~~~~
 
-A função `refreshMemoList()` modifica o DOM ao construir elemento por elemento a lista de notas contidas no banco de dados. Seria muito mais fácil utilizar uma template com handlebars ou coisa semelhante mas como esse é um app *vanilla javascript* fizemos tudo na mão. Essa função é chamada pela `showMemoList()` que foi mostrada anteriormente.
+The `refreshMemoList()` function modifies the DOM by building element by element the list of notes that is displayed on the screen. It would be a lot easier to use some templating aid such as handlebars or underscore but since this app is built using nothing but *vanilla javascript* we're doing everything by hand. This function is called by `showMemoList()` that was shown above.
 
-Essas são todas as funções do nosso programa. A única parte de código que falta é a inicialização dos eventos e a chamada inicial para `refreshMemoList()`.
+These are all the functions used by our app. The only part of the code that is missing is the initialization of the event handlers and the initial call of `refreshMemoList()`.
 
 ~~~~~~~
 window.onload = function () {
@@ -461,9 +461,9 @@ window.onload = function () {
 };
 ~~~~~~~
 
-Agora todos os nossos arquivos estão prontos e podemos testar o aplicativo no simulador.
+Now all files are ready and we can begin trying our application on the simulator.
 
-## Testando o app no simulador
+## Testing the app on the simulador
 
 Antes de testarmos o aplicativo no simulador é melhor garantirmos que todos os arquivos estão no lugar certo. Sua pasta deve se parecer com essa aqui:
 
