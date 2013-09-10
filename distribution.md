@@ -1,4 +1,4 @@
-# Distributing Your Apps{#distribution}
+# Distributing Your Apps {#distribution}
 
 Now that our application is ready we need to figure our a way to ship it to our users. On the [introduction chapter](#introduction) we understood that Mozilla does not try to restrict your freedom in any way and that we're free to spread our creations as we wish. On this chapter we're going to learn how to distribute our app **outside the [Firefox Marketplace](http://marketplace.firefox.com)**. 
 

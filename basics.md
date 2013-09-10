@@ -1,4 +1,4 @@
-# Basic Concepts {^concepts}
+# Basic Concepts {#concepts}
 
 Before we get our hands dirty and build our first app, lets learn some basic concepts about developing for Firefox OS. We know that the apps are based on HTML5 just like a web page but we don't know what are the differences between a web page and a open web app. If we use our collective knowledge about other mobile platforms we can agree that the minimum requirements for an application are:
 

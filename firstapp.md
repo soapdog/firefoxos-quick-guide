@@ -20,8 +20,6 @@ The first step is to create a folder for the application, lets call this folder 
 
 Memos manifest is pretty simple. Create a file named **manifest.webapp** on the **memos** folder. Manifests are [JSON](http://json.org) files that describes an application. In this file we place things such as the name of the app, who the developer is, what icons are used, what file is used to launch the app, what hardware access permission it needs and more.
 
-Abaixo podemos ver o conteúdo do manifesto do Memos, atenção ao copiar pois é fácil errar uma vírgula e tornar o seu JSON inválido. Para validar o seu JSON você pode utilizar várias ferramentas, uma delas que é especifica para validação de manifestos que é o [http://appmanifest.org/](http://appmanifest.org/). Para aprender mais sobre manifestos visite [a página na MDN sobre manifestos](https://developer.mozilla.org/pt-BR/docs/Apps/Manifest).
-
 Below we can see the contents of the Memos app manifest. Attention when copying this data because its very easy to place a comma on the wrong place and create an invalid JSON. There are many tools that you can use to validate JSON files but there is a special one that is built specifically for validating app manifests. You can check out this online tool at [http://appmanifest.org/](http://appmanifest.org/). To learn more about app manifests read [this page on MDN about manifests](https://developer.mozilla.org/docs/Apps/Manifest).
 
 <<[Memos manifest file (*manifest.webapp*)](code/memos/manifest.webapp)
