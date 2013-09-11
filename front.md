@@ -2,11 +2,11 @@
 
 # This is a BETA book
 
-This book is being made in an agile way. I will update this book often, expanding its contents and revising the text. Because some APIs are still being implemented by Firefox OS its a good practice to make sure you're reading an up to date version of this book.
+This book is being made in an lean way. The plan is to update this book often, expanding its contents and revising the text. Since some APIs are still being implemented by Firefox OS its a good practice to make sure you're reading an up to date version of this book.
 
-Differently from some other technical authors that try to exclude themselves from the text, here you will find many parts where I express my personal opinion and make decisions that may be different from what other programmers would do. I will try to make it clear and explain my reasoning when I am giving my opinion. Anyway, if there is an error in what I am saying, I will revise the text and update the book.
+Differently from some other technical authors that try to exclude themselves from the text, on this book you will find many parts where I express my personal opinion and make decisions that may be different from what other programmers would do. I will always try to make it clear and explain my reasoning when I am giving my opinion. Anyway, if there is an error in what I am saying, I will revise the text and update the book.
 
-I am writing this book in my spare time and distributing it under a *Creative Commons License* for **free** using [Leanpub](http://leanpub.com). Writing a book requires a lot of work and I would like to dedicate more time in my life for this type of activity. Those that think that this book is useful (or cool) may move the price slider on Leanpub download page from zero to any desired amount and give me some bucks. Those that would rather donate using PayPal, I can receive donations under the *agarzia@mac.com* account. Regardless of donations, you should fill your email on the download form to make sure that once the book is updated you will receive a notice.
+Originally I was this book in my spare time but thanks to the good help of my mentor Marcos Cáceres on Google Summer of Code 2013 this book was also accepted as a part of my project. This book is distributed it under a *Creative Commons License* for **free** using [Leanpub](http://leanpub.com). Writing a book requires a lot of work and I would like to dedicate more time in my life for this type of activity after the Google Summer of Code is done. Those that think that this book is useful (or cool) may move the price slider on Leanpub download page from zero to any desired amount and give me some bucks. Those that would rather donate using PayPal, I can receive donations under the *agarzia@mac.com* account. Regardless of donations, you should fill your email on the download form to make sure that once the book is updated you will receive a notice.
 
 To send comments and feedback please send an email to [fxosquickguide@andregarzia.com](mailto:fxosquickguide@andregarzia.com). My website is [http://andregarzia.com](http://andregarzia.com). My Twitter account is [@soapdog](http://twitter.com/soapdog).
 
@@ -16,24 +16,23 @@ The cover page was created by Raphael Eckhardt, a designer and illustrator from 
 
 # Updates
 
-You can register your email to receive automatic updates when you download this book from its [book page at Leanpub](http://leanpub.com/quickguidefirefoxosdevelopment). The objective is to update this book many times per month. If you got this book from a friend or from some other site, you should consider going to the page above and download and register there to make sure you will receive the update notices.
-
+You can register your email to receive automatic updates when you download this book from its [book page at Leanpub](http://leanpub.com/quickguidefirefoxosdevelopment). The plan is to update this book many times per month. If you got this book from a friend or from some other site, you should consider going to the page above to download and register there thus making sure you will receive the update notices.
 
 # Acknowledgements
 
-To my wife Elisangela Mendonça de Andrade Garzia, the best wife in the world!
+To my wife Lili, the best wife in the world!
 
 To Mozilla for always believing in us, for keeping the web open and free and for always placing the user first!
 
-To the Brazilian Mozilla Community for receiving me so well and putting up with me in general.
+To the Brazilian Mozilla Community for receiving me so well and being just awesome!
 
 # Who should read this book
 
-This book is written for readers with an intermediate knowledge of HTML, CSS and JavaScript who wants to build mobile applications using web technologies. Teaching HTML, CSS and JavaScript is beyond the scope of this book. I will give you links for good reference books though.
+This book is written for readers with an intermediate knowledge of HTML, CSS and JavaScript who wants to build mobile applications for Firefox OS. Teaching HTML, CSS and JavaScript is beyond the scope of this book. I will give you links for good reference books though.
 
 # Best Practices vs Beginner Friendliness 
 
-Experienced developers will notice that sometimes I don't follow all the good practices in the source code of the examples of this book. Even though I am avoiding anti-patterns in here, I am trying to keep the use of immediate functions and other similar practices to a minimum. The main reason for that is to make the source code beginner friendly since this is an introductory book. Seasoned programmers will know when and how to change things while beginner coders will be able to understand whats is going on. All code here works and as I update this book I may revisit the code and use more and more best practices depending on the readers feedback.
+Experienced developers will notice that sometimes I don't follow all the good practices in the source code of the examples of this book. Even though I am avoiding anti-patterns in here, I am trying to keep the use of immediate functions and other similar practices to a minimum. The main reason for that is to make the source code beginner friendly as this is an introductory book. Seasoned programmers will know when and how to change things while beginner coders will still be able to understand whats is going on. All code here works and as I update this book I may revisit the code and use more and more best practices depending on the readers feedback.
 
 If you want to dive deeper in the world of high quality JavaScript coding here are some good books:
 
@@ -44,7 +43,7 @@ If you want to dive deeper in the world of high quality JavaScript coding here a
 
 # Feedback & Pull Requests
 
-This is a Free and Open book and I am anxious to receive all feedback that you guys can give me. All the content of the book is at a [GitHub repository](https://github.com/soapdog/firefoxos-quick-guide) and is built using Markdown (with some extensions by Leanpub). To give me feedback, bug fixes and improvements just send me a pull request. Thanks in advance for all contributions.
+This is a Free and Open book and I am anxious to receive all feedback that you people can give me. All the content of the book is at a [GitHub repository](https://github.com/soapdog/firefoxos-quick-guide) and is built using Markdown (with some extensions by Leanpub). To give me feedback, bug fixes and improvements just send me a pull request. Thanks in advance for all contributions.
 
 The Git repository for this book is at [https://github.com/soapdog/firefoxos-quick-guide](https://github.com/soapdog/firefoxos-quick-guide).
 
@@ -52,7 +51,7 @@ The Git repository for this book is at [https://github.com/soapdog/firefoxos-qui
 
 This book was originally written in Portuguese and translated by me into English. Both versions are available for free on the net at:
 
-* [Portuguese Version](http://leanpub.com/guiarapidofirefoxos): Guia Rápido para Desenvolvimendo para Firefox OS.
+* [Portuguese Version](http://leanpub.com/guiarapidofirefoxos): Guia Rapido para Desenvolvimendo para Firefox OS.
 * [English Version](http://leanpub.com/quickguidefirefoxosdevelopment): Quick Guide for Firefox OS App Development.
 
 I welcome all help to translate this book to even more languages (and to fix my broken english).

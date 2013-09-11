@@ -53,7 +53,7 @@ Just like in the World Wide Web you're not required to use the *look and feel* o
 The HTML structure that we use in this program was built following the patterns adopted by the Gaia Building Blocks where each screen is a `<SECTION>` and the elements follow a predefined format. The ideal way of going on now is to download the source code from the [memos repository]
 (https://github.com/soapdog/memos-for-firefoxos) so that you have the Building Blocks available for use.
 
-W> Warning: The Building Blocks version I used is not the current one and I've changed the original files so do not download the current version from their website and use the one provided on the Memos repository for this chapter (In the real world, use the version from their site).
+W> Warning: The Building Blocks version I used is not the same as the current one available on the net. I've changed the original files so do not download the current version from their website and use the one provided on the Memos repository for this chapter (In the real world, use the version from their site).
 
 ### Including the Building Blocks
 
