@@ -44,4 +44,4 @@ This comes with a small caveat, sadly: some of the WebAPIs are too security sens
 
 HTML5 is here to stay and will only get better. Firefox OS is the new open mobile operating system by Mozilla completely based on web technologies. This system is built on the open and offers a robust HTML5 implementation that goes beyond the other platforms by offering the WebAPI which is a collection of APIs to access *hardware and operating system services using JavaScript*. These new APIs are being standardized through the World Wide Web Consortium (W3C) and will hopefully be adopted by other browsers in the future.
 
-In the next chapter we'll see what we need to develop apps for Firefox OS. Let's move on and get an app up and running! 
+In the next chapter we'll quickly cover some the basic concepts of Firefox OS. After that, we should know enough to get an app up and running! 
