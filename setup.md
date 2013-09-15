@@ -1,12 +1,12 @@
 # Setup For Firefox OS App Development {#setup}
 
-To develop and test apps made for Firefox OS you need only a recent version of the Firefox Browser, the add-on called Firefox OS Simulator and a good text editor for programming[^editors].
+To develop and test apps made for Firefox OS you need only a recent version of the Firefox Browser, the add-on called "Firefox OS Simulator" and a good text editor for programming[^editors].
 
 [^editors]: There are many good editors out there with different levels of complexity and features. A very popular one that I recommend for those that don't have a favorite one is [SublimeText](http://sublimetext.com/). Personally, I use [WebStorm](http://www.jetbrains.com/webstorm/) which is a complete IDE for web app creation.
 
 ## Getting Firefox
 
-Different browsers have different engines for rendering web pages and for executing JavaScript. Google Chrome and Opera use an engine called Blink (a fork of WebKit), Safari uses WebKit and Firefox has an engine called Gecko that is used on the Firefox desktop browser, Firefox for android browser and Firefox OS. Thats why using Firefox desktop browser is the way to go for developing for Firefox OS, they use the same engine.
+Different desktop browsers have different engines for rendering web pages: Google Chrome and Opera use Blink (a fork of WebKit), Internet Explorer uses Trident, while Safari uses WebKit. Mozilla has its own engine, called Gecko which is used in Firefox desktop, Firefox for Android, and Firefox OS. As these products use the same engine, it is possible to develop for Firefox OS using the Firefox desktop browser.  
 
 Another reason is that Mozilla ships a Firefox OS Simulator as a Firefox add-on.
 
