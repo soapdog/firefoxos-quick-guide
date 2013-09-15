@@ -52,11 +52,13 @@ Just like on the Web, you're not required to use the *look and feel* of Firefox 
 The HTML structure that we use in this application was built following the patterns adopted by the Gaia Building Blocks where each screen is a `<section>` and the elements follow a predefined format. If you haven't already, download the source code from the [memos repository]
 (https://github.com/soapdog/memos-for-firefoxos) so that you have the files (including the Building Blocks) to use. For those not confident with git and GitHub, the files are also available as a [.zip file](https://github.com/soapdog/memos-for-firefoxos/archive/master.zip). 
 
-W> Warning: The Building Blocks version I used for this app is not the same as the current one available on the net. I've changed the original files. Do not download the current version from their website for this sample and use the one provided on the Memos repository (In the real world, use the version from their site).
+W> Warning: The version of the Gaia Building Blocks I used for this app is not the most up-to-date available from Mozilla. Trying to update to the current version will, unfortunately, break the Memos app. In your own projects, however, always use the latest version of the Gaia Building Blocks.
 
 ### Including the Building Blocks
 
-Before doing anything else copy the **shared** and the **styles** folders that you obtained by downloading the Memos repository to the **memos** folder you created so that we can use the Building Blocks in our app. Lets begin our **index.html** files by including the needed bits.
+Before doing anything else copy the **shared** and the **styles** folders that you obtained by downloading the Memos repository to the **memos** folder you created. This will allow use to use the Gaia Building Blocks in our app. 
+
+Lets begin our **index.html** files by including the needed bits.
 
 ~~~~~~~~
 <!DOCTYPE html>
@@ -79,7 +81,7 @@ On *line 01* we declare the DOCTYPE as HTML5. From *line 05 up to 15* we include
 
 ### Building the main screen
 
-Now we can start building the various screens. As spoken earlier, each screen used by our app is a `<section>` inside the HTML `<body>`. The body tag must have an attribute *role* with its value equal to *application* because that is used by the CSS selectors to build the interface, so our body tag will be `<body role="application">`. Lets build the first screen and declare our body tag as well.
+Now we can start building the various screens. As mentioned earlier, each screen used by our app is a `<section>` inside the HTML `<body>`. The body tag must have an attribute *role* with its value equal to *application* because that is used by the CSS selectors to build the interface, so our body tag will be `<body role="application">`. Lets build the first screen and declare our body tag as well.
 
 ~~~~~~~~
 <body role="application">
@@ -97,7 +99,7 @@ Now we can start building the various screens. As spoken earlier, each screen us
 
 Our screen has a `<header>` containing a button to add new notes and the application name. The screen also has an `<article>` which will be used to hold the list of stored notes. We're going to use the button and the article IDs to capture events when we reach the JavaScript implementation part.
 
-Be aware that each screen is a fairly straight forward HTML chunk. Building these same screens in many languages usually requires a lot more work. All we're doing is declaring our components and giving them IDs when we need to reference them later.
+Be aware that each screen is a fairly straight forward HTML chunk. Building these same screens in many languages usually requires a lot more work. All we're doing is declaring our containers and giving them IDs when we need to reference them later.
 
 Now that the main screen is done, lets build the editing screen.
 
@@ -142,11 +144,15 @@ The editing screen is a bit more complex because it also holds the dialog box us
 </section>
 ~~~~~~~~
 
-On the top of the screen (a.k.a the `<header>`) we have a back button to return the main screen, a text entry field that is used to hold the title of the given note and a button that is used to share the note over email.
+At the top of the screen, represented by the `<header>` element, we have: 
 
-After the top toolbar we have a paragraph holding a `<textarea>` that is used to hold the content of the note and then another toolbar with a trashcan button used to delete the current viewed note.
+ * a back button to return to the main screen, 
+ * a text entry field that is used to hold the title of the given note, 
+ * and a button that is used to share the note over email.
 
-These three elements and their child nodes are the editing screen. After them we have a `<form>` that is used as a dialog box containing the confirmation screen that is presented to the user when he tries to delete a note. This dialog box is pretty easy containing only an confirmation prompt text and two buttons, one for deleting the note and another for canceling the action.
+Below the top toolbar, we have a paragraph holding a `<textarea>` that holds the content of the note and then another toolbar with a trashcan button used to delete the current viewed note.
+
+These three elements and their child nodes are the editing screen. After them we have a `<form>` that is used as a dialog box containing the confirmation screen that is presented to the user when he or she tries to delete a note. This dialog box is pretty simple, it only contains the text of the confirmation prompt and two buttons; one for deleting the note and another for canceling the action.
 
 Now that we're closing this `<section>` we have all our screens implemented and the remaining HTML code is only there to include the JavaScript files and close the html file.
 
@@ -159,7 +165,7 @@ Now that we're closing this `<section>` we have all our screens implemented and 
 
 ## Crafting the JavaScript code
 
-Now we're going to start coding for real and breath life into our app. To better organize this code, I've divided the JavaScript code in two files:
+Now we're going to breathe life into our app by adding JavaScript. To better organize this code, I've divided the JavaScript code into two files:
 
 * **model.js:** contains the routines to deal with storage and retrieval of notes but does not contain any app logic or anything related to the interface or data entry. In theory, we could reuse this same file in other apps that required text notes.
 * **app.js:** attaches the HTML elements with their event handlers and contains the app logic.
@@ -168,7 +174,7 @@ Both files should be placed inside a **js** folder next to the **style** and **s
 
 ### model.js
 
-We're going to use [IndexedDB](https://developer.mozilla.org/en-US/docs/IndexedDB/Using_IndexedDB) to store our notes. Since we asked the *storage* permission on the app manifest we can store as many notes as we want (a.k.a. until de device runs out of memory and screams for mercy).
+We're going to use [IndexedDB](https://developer.mozilla.org/en-US/docs/IndexedDB/Using_IndexedDB) to store our notes. Since we asked the *storage* permission on the app manifest we can store as many notes as we want - however, we should not abuse this! Firefox OS devices generally have very limited storage space, so you always need to be mindful of what data you store (users will delete and down-rate your app if it uses too much storage space!). And storing excessive amounts of data will have a performance penalty, which will make your app feel sluggish. Please also note that when you submit an application to the FireFox OS marketplace, reviewers will ask you why you need unlimited storage space - if you can't justify why, your application will be rejected.  
 
 The part of the code from *model.js* that is shown below is responsible for opening the connection and creating the storage.
 
@@ -288,9 +294,9 @@ function deleteMemo(inId, inCallback) {
 
 On the piece of code above we create a constructor function that creates new Memos with some fields already initialized. After that we implement functions for listing, saving and removing notes. Many of these functions receive a callback parameter called `inCallback` which is a function to be called after the function does its thing. This is needed due to the asynchronous nature of IndexedDB. All callbacks have the same signature which is `callback(error, value)` where one of the values is null depending on the outcome of the previous function.
 
-A> Since this is a beginner book I've opted not to use [*Promises*](https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise) since many beginners are not familiar with the concept. I recommend with all my heart using such concepts to create easier to maintain code that is more pleasant to read.
+A> Since this is a beginner book I've opted not to use [*Promises*](https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise) since many beginners are not familiar with the concept. I recommend using such concepts to create easier to maintain code that is more pleasant to read.
 
-Now that our note storage and manipulation functions are ready lets implement our app logic in a file called **app.js**.
+Now that our note storage and manipulation functions are ready, let's implement our app logic in a file called **app.js**.
 
 ### app.js
 
@@ -344,7 +350,7 @@ function newMemo() {
 }
 ~~~~~~~~
 
-At the beginning we declare some global variables (yuk!!!) to hold references to some DOM Elements that we want to use later inside some functions. The most interesting global is `currentMemo` which is an object that holds the current note that the user is reading.
+At the beginning we declare some global variables (yuck!!!) to hold references to some DOM Elements that we want to use later inside some functions. The most interesting global is `currentMemo` which is an object that holds the current note that the user is reading.
 
 The `showMemoDetail()` and `displayMemo()` functions work together. The first one loads the selected note into the `currentMemo` and manipulates the CSS of the elements so that the editing screen is shown. The second one picks the content from the `currentMemo` variable and places it on the screen. We could do both things on the same function but having them separate makes it easier to experiment with new implementations.
 
@@ -480,9 +486,13 @@ If everything works as expected you will see the Memos app on the list of apps.
 
 ![Memos showing on the dashboard](images/originals/memos-on-dashboard-display.png)
 
-When you add a new application the simulator launches with your new app running so that you can test it. Now you can test all the features for Memos. Congratulations you created and tested you first app! Its not a complex or revolutionary app but helped you understand the development workflow. Remember that whenever you alter some of the source files you need to press the **Refresh** button to update the copy of the app that is stored on the simulator.
+When you add a new application, the simulator will launch with your new app running - allowing you to test it. Now you can test all the features for Memos. 
+
+Congratulations! you created and tested your first app. Its not a complex or revolutionary app - but I hope it helped you understand the development workflow of FireFox OS. As you can see, it's not very different from standard Web development.  
+
+Remember that whenever you alter some of the source files you need to press the **Refresh** button to update the copy of the app that is stored on the simulator.
 
 ## Summary
 
-Congratulations you've built your first mobile application for Firefox OS and tested it on the simulator. On the next chapter we're going to check out the developer tools that comes bundled with Firefox, they will make your life a lot easier.
+In this chapter we built our first application for Firefox OS and saw it running on the simulator. In the next chapter we're going to check out the developer tools that comes bundled with Firefox, they will make your life a lot easier when developing applications.
 
