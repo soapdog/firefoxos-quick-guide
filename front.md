@@ -1,5 +1,17 @@
 {frontmatter}
 
+# Acknowledgments
+
+To my wife Lili, the best wife in the world!
+
+To Mozilla for always believing in us, for keeping the web open and free and for always placing the user first!
+
+To the Brazilian Mozilla Community for receiving me so well and being just awesome!
+
+To my GSoC mentor Marcos Caceres, the Mozilla WebAPI Team, the Mozilla Tech Evangelists and Dev Engagement teams for being more than awesome!
+
+To Google for the Google Summer of Code 2013! This program is wonderful.
+
 # This book is in perpetual beta
 
 My plan is to update this book often, expanding its contents and revising the text as issues are found by readers. Since some APIs are still being implemented by Firefox OS, you will want to make sure you're reading an up to date version of this book.
@@ -18,14 +30,6 @@ This book is distributed for **free** using [Leanpub](http://leanpub.com).
 
 You can register your email to receive automatic updates when you download this book from its [book page at Leanpub](http://leanpub.com/quickguidefirefoxosdevelopment). The plan is to update this book many times per month. If you got this book from a friend or from some other site, you should consider going to the page above to download and register there thus making sure you will receive the update notices.
 
-# Acknowledgments
-
-To my wife Lili, the best wife in the world!
-
-To Mozilla for always believing in us, for keeping the web open and free and for always placing the user first!
-
-To the Brazilian Mozilla Community for receiving me so well and being just awesome!
-
 # Donations
 
 Writing a book requires a lot of work and I would like to dedicate more time in my life for this type of activity after the 2013 Google Summer of Code is done. Those that think that this book is useful (or cool) may move the price slider on Leanpub download page from zero to any desired amount and give me some bucks. Those that would rather donate using PayPal, I can receive donations under the *agarzia@mac.com* account. 
@@ -36,7 +40,7 @@ Regardless of donations, you should fill your email on the download form to make
 
 To send comments and feedback please send an email to [fxosquickguide@andregarzia.com](mailto:fxosquickguide@andregarzia.com). My website is [http://andregarzia.com](http://andregarzia.com). My Twitter account is [@soapdog](http://twitter.com/soapdog).
 
-If you want to help inprove the content of this book, please see the Feedback & Pull Requests section.
+If you want to help improve the content of this book, please see the Feedback & Pull Requests section.
 
 # Cover Illustration
 

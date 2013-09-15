@@ -38,7 +38,7 @@ There are pros and cons to both types. On the one hand, hosted apps are easier t
 
 On the other hand, packaged apps have all their content stored on the device - which means they are always available when the user is offline (and so avoid needing appcache). They also have the ability to access security-sensitive WebAPIs that are not available to hosted apps. Updating them can be a bit painful, because you need to upload any new version to the Firefox Marketplace - which means going through the a review process, which can take some time.   
 
-When trying to choose which type of application to build, consider: if you require advanced WebAPIs, then you should use a packaged app. However, if your application works fine without needing to access any advanced system services or device capabilities beyond those already available in a web browser, then always choose a hosted app. 
+When trying to choose which type of application to build, consider: if you require advanced WebAPIs, then you should use a packaged app. However, if your application works fine without needing to access any advanced system services or device capabilities beyond those already available in a web browser, then always choose a hosted app. It is ok to use packaged apps if you don't have a place to host it.
 
 Above I mentioned that appcache can be problematic (which is sometimes required for hosted apps). Don't worry too much as there are tools available to make appcache generation and deployment easier [^js-tools].
 
