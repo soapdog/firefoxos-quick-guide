@@ -2,7 +2,7 @@
 
 ![Memos, a minimalist notepad app](images/originals/memos-app.png)
 
-In this chapter we're going to rebuild the **Memos** application which is a note taking application I built to use as an example in my talks about Firefox OS. Before coding, lets review how this app works. The app has three screens. The first one is the main screen and has a list of your stored notes by title. When you click a note (or add a new one) you're moved to the detail screen that allows you to edit the content and title of the given note as we shown in the shot below.
+In this chapter we're going to build a simple **Memos** application, which is an application for taking notes. Before coding, lets review how this app works. The app has three screens. The first one is the main screen and has a list of your stored notes by title. When you click a note (or add a new one) you're moved to the detail screen that allows you to edit the content and title of the given note as we shown in the shot below.
 
 ![Memos, editing screen](images/originals/memos-editing-screen.png)
 
