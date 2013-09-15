@@ -12,7 +12,7 @@ On the screen shown above the user can choose to delete the selected note by cli
 
 ![Memos, note removal confirmation screen](images/originals/memos-delete-screen.png)
 
-The source code for Memos is available at [the Memos Github Repo](https://github.com/soapdog/memos-for-firefoxos). I recommend you download the files, so it's easier to follow along. Another copy of the source code is available on the **code** folder inside the [github repository for this book](https://github.com/soapdog/firefoxos-quick-guide).
+The source code for Memos is available at [the Memos Github Repo](https://github.com/soapdog/memos-for-firefoxos) (also available as a [.zip](https://github.com/soapdog/memos-for-firefoxos/archive/master.zip) file). I recommend you download the files, so it's easier to follow along. Another copy of the source code is available on the **code** folder inside the [github repository for this book](https://github.com/soapdog/firefoxos-quick-guide).
 
 Memos uses [IndexedDB](https://developer.mozilla.org/en-US/docs/IndexedDB/Using_IndexedDB) to store the notes and the [Gaia Building Blocks](http://buildingfirefoxos.com/building-blocks) to build the interface. In a future update to this book I will talk more about the Gaia Building Blocks, but in this first version I am just going to use them. You can check the link above to learn more about them and what user interface tools they provide.
 
@@ -49,8 +49,8 @@ Before we start working on the HTML, lets take a brief detour to talk quickly ab
 
 Just like on the Web, you're not required to use the *look and feel* of Firefox OS in your own app. Using or not using the Gaia Building Blocks is a personal decision - and a good applications should have it's own distinctive style and user experience. The important thing to understand is that your app will not suffer any type of prejudice or penalty on the Firefox Marketplace by not using the Gaia look and feel. I am using it here because I am not a good designer so ready made UI toolkits appeal to me (its either that or hiring a designer).
 
-The HTML structure that we use in this program was built following the patterns adopted by the Gaia Building Blocks where each screen is a `<section>` and the elements follow a predefined format. The ideal way to continue reading this chapter is to download the source code from the [memos repository]
-(https://github.com/soapdog/memos-for-firefoxos) so that you have the files (including the Building Blocks) to use.
+The HTML structure that we use in this application was built following the patterns adopted by the Gaia Building Blocks where each screen is a `<section>` and the elements follow a predefined format. If you haven't already, download the source code from the [memos repository]
+(https://github.com/soapdog/memos-for-firefoxos) so that you have the files (including the Building Blocks) to use. For those not confident with git and GitHub, the files are also available as a [.zip file](https://github.com/soapdog/memos-for-firefoxos/archive/master.zip). 
 
 W> Warning: The Building Blocks version I used for this app is not the same as the current one available on the net. I've changed the original files. Do not download the current version from their website for this sample and use the one provided on the Memos repository (In the real world, use the version from their site).
 
