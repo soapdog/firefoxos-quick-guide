@@ -58,11 +58,11 @@ There are three security levels on Firefox OS - with each level having more acce
 
 During development, it is possible for us to access privileged APIs without needing any special permission from Mozilla. But when we want to distribute a privileged app, it first needs to go to the Firefox Marketplace. There, the code is checked as part of a rigorous approval process, and if it's found to be OK, it will be digitally signed - which tells users of Firefox OS that this application is allowed to access sensitive APIs.
 
-On [the page about the WebAPIs on the Mozilla Wiki](https://wiki.mozilla.org/WebAPI) we can see what APIs are implemented on what platforms and what access level is needed to use each API.
+On [the page about the WebAPIs on the Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/WebAPI) we can see what APIs are implemented on what platforms and what access level is needed to use each API.
 
 ![Access levels for the APIs](images/originals/webapi-access.png)
 
-As we can see on the image above, any application can access the *Geolocation API* but only privileged apps can access the *WIFI Information API*.
+As we can see on the image above, any application can access the *IndexedDB API and FileHandle API* but only privileged apps can access the *Contacts API and Device Storage API*.
 
 ## Mozilla's WebAPIs
 
