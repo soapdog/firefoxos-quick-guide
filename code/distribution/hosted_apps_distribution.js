@@ -1,8 +1,8 @@
 var installapp = navigator.mozApps.install(manifestURL);
 installapp.onsuccess = function(data) {
-  // A App foi instalada
+  // A App was installed.
 };
 installapp.onerror = function() {
- // A App não foi instalada, informações em 
+ // A App was not installed, more information at 
  // installapp.error.name
 };
