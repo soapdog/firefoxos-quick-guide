@@ -11,7 +11,7 @@ Looking at the big picture, a Firefox OS app is just a web page that has an icon
 
 ## The Application Manifest
 
-The [manifest]https://developer.mozilla.org/docs/Apps/Manifest) is a [JSON](http://json.org) file that describes aspects of an hosted web app. Usually this file is called **manifest.webapp** and lives next to your main HTML file that is usually called **index.html**.
+The [manifest](https://developer.mozilla.org/docs/Apps/Manifest) is a [JSON](http://json.org) file that describes aspects of an hosted web app. Usually this file is called **manifest.webapp** and lives next to your main HTML file that is usually called **index.html**.
 
 <<[Sample Manifest](code/sample_manifest.webapp)
 
