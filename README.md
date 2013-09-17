@@ -12,7 +12,7 @@ To contribute to the English version of this book just use the issues and pull r
 
 ## Other versions
 
-Portuguese version: [https://github.com/soapdog/guia-rapido-firefox-os/](GitHub Repo) and [https://leanpub.com/guiarapidofirefoxos](Live book page)
+Portuguese version: [GitHub Repo](https://github.com/soapdog/guia-rapido-firefox-os/) and [Live book page](https://leanpub.com/guiarapidofirefoxos)
 
 ## License
 
