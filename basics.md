@@ -17,7 +17,7 @@ The [manifest](https://developer.mozilla.org/docs/Apps/Manifest) is a [JSON](htt
 
 Above we can see the manifest for an application called memos[^memos]. Among other things it describes who created the application, which icons are used, what is the name of the app, what file is used to launch the app (in this case it is *index.html*), what hardware access permissions your app requires, etc. This file is used by Firefox OS to add the application to the device's home screen and by the Firefox Marketplace to display the application on the catalog as we can see in the image below.
 
-[^memos]: This is a sample app for Firefox OS as [seen on the Firefox Marketplace](https://marketplace.firefox.com/app/memos) whose the [source code is on GitHub](https://github.com/soapdog/memos-for-firefoxos).
+[^memos]: This is a sample app for Firefox OS as [seen on the Firefox Marketplace](https://marketplace.firefox.com/app/memos) for which the [source code is on GitHub](https://github.com/soapdog/memos-for-firefoxos).
 
 ![Memos app shown at the Firefox Marketplace](images/originals/memos-marketplace.png)
 
