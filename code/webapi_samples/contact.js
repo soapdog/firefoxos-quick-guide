@@ -3,8 +3,8 @@ contact.init({name: "Odin"});
 
 var request = navigator.mozContacts.save(contact);
 request.onsuccess = function() {
-  // contato salvo com sucesso
+  // contact saved successfully
 };
 request.onerror = function() {
-  // não foi possível salvar o contato
+  // there was an error while trying to save the contact
 };
