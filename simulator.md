@@ -26,7 +26,7 @@ Whenever you update your application you should click **Refresh** to update the 
 
 ### Adding hosted apps
 
-If you're building a hosted app then you should test it by using a web server. Do not try to use the method described above for hosted apps because you may miss some errors that will only happen on a hosted environment - such as serving the manifest with the wrong *MIME type*. Note that the Simulator won't warn you about things like incorrect MIME types, but it's important to get such things right if you submit your app to the Mozilla marketplace. 
+If you're building a hosted app then you should test it by using a web server. Do not try to use the method described above for hosted apps because you may miss some errors that will only happen on a hosted environment - such as serving the manifest with the wrong *MIME type*. Note that the simulator won't warn you about things like incorrect MIME types, but it's important to get such things right if you submit your app to the Mozilla Marketplace. 
 
 Most of the hosted apps are not applications built exclusively for Firefox OS but responsive design based websites that are able to adapt themselves to different devices and resolutions. These web apps usually have a complex backend that needs to be in-place for the application to work and that's why you need to test the app using a real web server running your backend stuff. 
 
@@ -34,7 +34,7 @@ To run your app in the simulator, fill the URL of your application in the text e
 
 ![Adding a hosted app to the simulator](images/originals/simulator-add-url.png)
 
-After clicking the button, the manifest is verified and if it is correct the application is added and the simulator is launched with your application running. Like when we're adding packaged apps, if something wrong happens with in the manifest you will see a report (e.g. "app submission to the Marketplace needs at least an 128 icon"). 
+After clicking the button, the manifest is verified and if it is correct the application is added and the simulator is launched with your application running. Like when we're adding packaged apps, if something wrong happens with in the manifest you will see a report (e.g. "app submission to the marketplace needs at least an 128 icon"). 
 
 As with packaged apps, whenever you update your application you should click **Refresh** to update the version of the app on the simulator (you can also press CMD/CTRL+R on the simulator window).
 
@@ -84,6 +84,6 @@ With the application running on the device you can use *remote debugging* to con
 
 ## Summary
 
-In summary, the Firefox OS Simulator is awesome for building FireFox OS specific apps - but has some limitations if you are trying to build for a range of devices (e.g. currently, you can't emulate what Firefox OS would feel like on a tablet). 
+In summary, the Firefox OS Simulator is awesome for building Firefox OS specific apps - but has some limitations if you are trying to build for a range of devices (e.g. currently, you can't emulate what Firefox OS would feel like on a tablet). 
 
 Besides feeling awesome and empowered, by this point in the book you hopefully have a good grasp of the workflow for building apps for Firefox OS. In the next chapter we're going to see how you can distribute your apps to users.
