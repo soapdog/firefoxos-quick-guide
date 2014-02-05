@@ -64,14 +64,19 @@ Let's begin our **index.html** files by including the needed bits.
 <html>
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="/style/base.css" />
-    <link rel="stylesheet" type="text/css" href="/style/ui.css" />
-    <link rel="stylesheet" type="text/css" href="/style/building_blocks.css" />
-    <link rel="stylesheet" type="text/css" href="shared/style/headers.css" />
-    <link rel="stylesheet" type="text/css" href="shared/style_unstable/lists.css" />
-    <link rel="stylesheet" type="text/css" href="shared/style_unstable/toolbars.css" />
-    <link rel="stylesheet" type="text/css" href="shared/style/input_areas.css" />
-    <link rel="stylesheet" type="text/css" href="shared/style/confirm.css" />
+    <link rel="stylesheet" type="text/css" href="style/base.css" />
+    <link rel="stylesheet" type="text/css" href="style/ui.css" />
+    <link rel="stylesheet" type="text/css" href="style/building_blocks.css" />
+    <link rel="stylesheet" type="text/css"
+          href="shared/style/headers.css" />
+    <link rel="stylesheet" type="text/css"
+          href="shared/style_unstable/lists.css" />
+    <link rel="stylesheet" type="text/css"
+          href="shared/style_unstable/toolbars.css" />
+    <link rel="stylesheet" type="text/css"
+          href="shared/style/input_areas.css" />
+    <link rel="stylesheet" type="text/css"
+          href="shared/style/confirm.css" />
     <title>Memos</title>
 </head>
 ~~~~~~~~
@@ -116,7 +121,8 @@ The editing screen is a bit more complex because it also holds the dialog box us
             </a>
         </menu>
         <form action="#">
-            <input id="memo-title" placeholder="Memo Title" required="required" type="text">
+            <input id="memo-title" placeholder="Memo Title" required="required"
+	           type="text">
             <button type="reset">Remove text</button>
         </form>
     </header>
@@ -130,7 +136,8 @@ The editing screen is a bit more complex because it also holds the dialog box us
             </li>
         </ul>
     </div>
-    <form id="delete-memo-dialog" role="dialog" data-type="confirm" class="hidden">
+    <form id="delete-memo-dialog" role="dialog" data-type="confirm"
+          class="hidden">
         <section>
             <h1>Confirmation</h1>
             <p>Are you sure you want to delete this memo?</p>
@@ -215,7 +222,10 @@ request.onupgradeneeded = function (event) {
         console.log("Adding sample memo");
         var sampleMemo1 = new Memo();
         sampleMemo1.title = "Welcome Memo";
-        sampleMemo1.content = "This is a note taking app. Use the plus sign in the topleft corner of the main screen to add a new memo. Click a memo to edit it. All your changes are automatically saved.";
+        sampleMemo1.content = "This is a note taking app. Use the plus sign " +
+	                      "in the topleft corner of the main screen to " +
+			      "add a new memo. Click a memo to edit it. All " +
+			      "your changes are automatically saved.";
 
         objectStore.add(sampleMemo1);
     }
@@ -245,7 +255,8 @@ function listAllMemoTitles(inCallback) {
     objectStore.openCursor().onsuccess = function (event) {
         var cursor = event.target.result;
         if (cursor) {
-            console.log("Found memo #" + cursor.value.id + " - " + cursor.value.title);
+            console.log("Found memo #" + cursor.value.id +
+	                         " - " + cursor.value.title);
             inCallback(null, cursor.value);
             cursor.continue();
         }
@@ -282,7 +293,8 @@ function saveMemo(inMemo, inCallback) {
 
 function deleteMemo(inId, inCallback) {
     console.log("Deleting memo...");
-    var request = db.transaction(["memos"], "readwrite").objectStore("memos").delete(inId);
+    var request = db.transaction(["memos"],
+                  "readwrite").objectStore("memos").delete(inId);
 
     request.onsuccess = function (event) {
         console.log("Memo deleted!");
@@ -323,7 +335,8 @@ function shareMemo() {
         data: {
             type: "mail",
             body: currentMemo.content,
-            url: "mailto:?body=" + encodeURIComponent(currentMemo.content) + "&subject=" + encodeURIComponent(currentMemo.title)
+            url: "mailto:?body=" + encodeURIComponent(currentMemo.content) +
+	                "&subject=" + encodeURIComponent(currentMemo.title)
 
         }
     });
@@ -448,14 +461,22 @@ window.onload = function () {
     deleteMemoDialog = document.getElementById("delete-memo-dialog");
 
     // All the listeners for the interface buttons and for the input changes
-    document.getElementById("back-to-list").addEventListener("click", showMemoList);
-    document.getElementById("new-memo").addEventListener("click", newMemo);
-    document.getElementById("share-memo").addEventListener("click", shareMemo);
-    document.getElementById("delete-memo").addEventListener("click", requestDeleteConfirmation);
-    document.getElementById("confirm-delete-action").addEventListener("click", deleteCurrentMemo);
-    document.getElementById("cancel-delete-action").addEventListener("click", closeDeleteMemoDialog);
-    document.getElementById("memo-content").addEventListener("input", textChanged);
-    document.getElementById("memo-title").addEventListener("input", textChanged);
+    document.getElementById("back-to-list")
+            .addEventListener("click", showMemoList);
+    document.getElementById("new-memo")
+            .addEventListener("click", newMemo);
+    document.getElementById("share-memo")
+            .addEventListener("click", shareMemo);
+    document.getElementById("delete-memo")
+            .addEventListener("click", requestDeleteConfirmation);
+    document.getElementById("confirm-delete-action")
+            .addEventListener("click", deleteCurrentMemo);
+    document.getElementById("cancel-delete-action")
+            .addEventListener("click", closeDeleteMemoDialog);
+    document.getElementById("memo-content")
+            .addEventListener("input", textChanged);
+    document.getElementById("memo-title")
+            .addEventListener("input", textChanged);
 
     // the entry point for the app is the following command
     refreshMemoList();
