@@ -58,7 +58,7 @@ If you want to dive deeper in the world of high quality JavaScript coding here a
 
 * [JavaScript: The Good Parts](http://shop.oreilly.com/product/9780596517748.do): The JavaScript Book.
 * [JavaScript Patterns](http://shop.oreilly.com/product/9780596806767.do): Patterns and best practices.
-* [JavaScript Enlightenment](): Advanced JavaScript techniques.
+* [JavaScript Enlightenment](http://shop.oreilly.com/product/0636920027713.do): Advanced JavaScript techniques.
 * [Maintainable JavaScript](http://shop.oreilly.com/product/0636920027713.do): Writing code that is easy to maintain and work with.
 
 ## Feedback & Pull Requests
