@@ -1,6 +1,6 @@
 # Basic Concepts {#concepts}
 
-Before we get our hands dirty and build our first app, lets learn some basic concepts about developing for Firefox OS. We learned in the [introduction](#introduction) that, just like web pages, apps in Firefox OS are based on HTML5. However, we haven't explained what makes Firefox OS apps different from regular web pages. 
+Before we get our hands dirty and build our first app, let's learn some basic concepts about developing for Firefox OS. We learned in the [introduction](#introduction) that, just like web pages, apps in Firefox OS are based on HTML5. However, we haven't explained what makes Firefox OS apps different from regular web pages. 
 
 If we use our collective knowledge about other mobile platforms we can see that native application generally will have:
 
@@ -25,18 +25,18 @@ Note how the information from the manifest is used by the system to add the app 
 
 ![Memos on the simulator](images/originals/memos-simulator.png)
 
-By gathering your HTML, CSS, JavaScript, and a manifest file you already have an application ready to run on Firefox OS. Moving on our topic about basic concepts lets learn more about what application types there are.
+By gathering your HTML, CSS, JavaScript, and a manifest file you already have an application ready to run on Firefox OS. Moving on our topic about basic concepts let's learn more about what application types there are.
 
 ## Types of Application
 
-Firefox OS currently has two types of applications: hosted apps and packaged apps - though more types may become available in the future (e.g., custom keyboards and the ability to create other system services).
+Firefox OS currently has two types of applications: hosted apps and packaged apps - though more types may become available in the future (e.g. custom keyboards and the ability to create other system services).
 
 * **Hosted Apps:** Are hosted on a web server just like normal websites. This means that when the user launches a hosted app, its content is loaded from the remote server (or from the cache, if available).
 * **Packaged Apps:** Are distributed as a zip file and copied to the device when installed. When the user launches a packaged app, its contents are loaded from the zip file instead of a remote server. 
 
 There are pros and cons to both types. On the one hand, hosted apps are easier to maintain, as all you need to do is maintain files on your web server. However, it's harder to make them work offline because it requires the use of the much despised [**appcache**](https://developer.mozilla.org/pt-BR/docs/HTML/Using_the_application_cache). Hosted apps are also limited in which WebAPIs they can use, which means they can't do all the things a packaged app can do.   
 
-On the other hand, packaged apps have all their content stored on the device - which means they are always available when the user is offline (and so avoid needing appcache). They also have the ability to access security-sensitive WebAPIs that are not available to hosted apps. Updating them can be a bit painful, because you need to upload any new version to the Firefox Marketplace - which means going through the a review process, which can take some time.   
+On the other hand, packaged apps have all their content stored on the device - which means they are always available when the user is offline (and so avoid needing appcache). They also have the ability to access security-sensitive WebAPIs that are not available to hosted apps. Updating them can be a bit painful, because you need to upload any new version to the Firefox Marketplace - which means going through a review process, which can take some time.   
 
 When trying to choose which type of application to build, consider: if you require advanced WebAPIs, then you should use a packaged app. However, if your application works fine without needing to access any advanced system services or device capabilities beyond those already available in a web browser, then always choose a hosted app. It is ok to use packaged apps if you don't have a place to host it.
 
@@ -54,7 +54,7 @@ There are three security levels on Firefox OS - with each level having more acce
 
 * **Plain (a.k.a. web):** This is the default level for all applications. This level applies to hosted apps and packaged apps that do not declare a `type` property in their manifest file. These apps have access to the common set of APIs found in browsers - but don't have access to any of Mozilla's WebAPIs.
 * **Privileged:** This type of app has access to all common APIs found in the Firefox browser, plus some additional ones, such as contacts, and system alarms. Only **packaged apps can be privileged apps** and the package must be digitally signed by the Firefox OS marketplace.
-* **Certified:** For security reasons, this level is only available to Mozilla and its partners (e.g., phone manufacturers, telecoms, etc.). Certified apps are able to access all the APIs, such as telephony and more. An example of certified app is the Firefox OS dialer application. 
+* **Certified:** For security reasons, this level is only available to Mozilla and its partners (e.g. phone manufacturers, telecoms, etc.). Certified apps are able to access all the APIs, such as telephony and more. An example of certified app is the Firefox OS dialer application. 
 
 During development, it is possible for us to access privileged APIs without needing any special permission from Mozilla. But when we want to distribute a privileged app, it first needs to go to the Firefox Marketplace. There, the code is checked as part of a rigorous approval process, and if it's found to be OK, it will be digitally signed - which tells users of Firefox OS that this application is allowed to access sensitive APIs.
 
@@ -96,12 +96,12 @@ Imagine you are building an application that applies fancy filters to pictures. 
 
 <<[Picking an image](code/webapi_samples/pick.js)
 
-Here we see another example of a [WebActivity](https://hacks.mozilla.org/2013/01/introducing-web-activities/). These activities are available to all applications. In this specific sample we're using the *pick* activity and passing it the *MIME Types* of the files that we wish to retrieve. When this code is executed, the system shows a screen to the user asking where he or she wants to retrieve the image from (camera, gallery, wallpapers). If the user selects an image, the success callback is triggered. If the user cancels the operation, the error callback is executed. On the image below, we can see the dialog that lets the user pick a photo from the device:
+Here we see another example of a [WebActivity](https://hacks.mozilla.org/2013/01/introducing-web-activities/). These activities are available to all applications. In this specific sample we're using the *pick* activity and passing in the *MIME Types* of the files that we wish to retrieve. When this code is executed, the system shows a screen to the user asking where he or she wants to retrieve the image from (camera, gallery, wallpapers). If the user selects an image, the success callback is triggered. If the user cancels the operation, the error callback is executed. On the image below, we can see the dialog that lets the user pick a photo from the device:
 
 ![Example of the *pick activity*](images/originals/pick_image.png)
 
 ## Summary
 
-In this chapter we saw that, unlike regular web pages, both Firefox OS's hosted apps and packaged apps rely on a manifest file. We also saw that, from a security perspective, packaged apps can be "privileged" or "certified". Only privileged and certified apps can access Mozilla's powerful set of WebAPIs. the WebAPIs are not available to hosted apps or to regular web pages. 
+In this chapter we saw that, unlike regular web pages, both Firefox OS' hosted apps and packaged apps rely on a manifest file. We also saw that, from a security perspective, packaged apps can be "privileged" or "certified". Only privileged and certified apps can access Mozilla's powerful set of WebAPIs. the WebAPIs are not available to hosted apps or to regular web pages. 
 
 Now it's about time we get our hands dirty and create an app!

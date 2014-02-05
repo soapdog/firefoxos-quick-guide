@@ -37,7 +37,7 @@ var PhoneNumber = (function (dataBase) {
   var regionCache = Object.create(null);
 
   // Parse an array of strings into a convenient object. We store meta
-  // data as arrays since thats much more compact than JSON.
+  // data as arrays since that's much more compact than JSON.
   function ParseArray(array, encoding, obj) {
     for (var n = 0; n < encoding.length; ++n) {
       var value = array[n];
@@ -320,7 +320,7 @@ var PhoneNumber = (function (dataBase) {
     if (md.possiblePattern.test(number))
       return new NationalNumber(md, number);
 
-    // Now lets see if maybe its an international number after all, but
+    // Now let's see if maybe its an international number after all, but
     // without '+' or the international prefix.
     if (ret = ParseInternationalNumber(number))
       return ret;

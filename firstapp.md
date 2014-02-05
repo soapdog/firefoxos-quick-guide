@@ -2,7 +2,7 @@
 
 ![Memos, a minimalist notepad app](images/originals/memos-app.png)
 
-In this chapter we're going to build a simple **Memos** application, which is an application for taking notes. Before coding, lets review how this app works. 
+In this chapter we're going to build a simple **Memos** application, which is an application for taking notes. Before coding, let's review how this app works. 
 
 The app has three screens. The first one is the main screen and has a list of your stored notes by title. When you click a note (or add a new one) you're moved to the detail screen that allows you to edit the content and title of the given note. This is shown in the figure below. 
 
@@ -16,17 +16,17 @@ The source code for Memos is available at [the Memos Github Repo](https://github
 
 Memos uses [IndexedDB](https://developer.mozilla.org/en-US/docs/IndexedDB/Using_IndexedDB) to store the notes and the [Gaia Building Blocks](http://buildingfirefoxos.com/building-blocks) to build the interface. In a future update to this book I will talk more about the Gaia Building Blocks, but in this first version I am just going to use them. You can check the link above to learn more about them and what user interface tools they provide.
 
-The first step is to create a folder for the application, lets call this folder **memos**.
+The first step is to create a folder for the application, let's call this folder **memos**.
 
 ## Creating the app manifest
 
 Memos manifest is pretty straight forward. Create a file named **manifest.webapp** on the **memos** folder. Manifests are [JSON](http://json.org) files that describes an application. In this file we place things such as the name of the app, who the developer is, what icons are used, what file is used to launch the app, what privileged APIs it would like to use, and more.
 
-Below we can see the contents of the Memos app manifest. Attention when copying this data because its very easy to place a comma on the wrong place and create an invalid JSON. There are many tools that you can use to validate JSON files but there is a special one that is built specifically for validating app manifests. You can check out this online tool at [http://appmanifest.org/](http://appmanifest.org/). To learn more about app manifests read [this page on MDN about them](https://developer.mozilla.org/docs/Apps/Manifest).
+Below we can see the contents of the Memos app manifest. Attention when copying this data because it's very easy to place a comma on the wrong place and create an invalid JSON. There are many tools that you can use to validate JSON files but there is a special one that is built specifically for validating app manifests. You can check out this online tool at [http://appmanifest.org/](http://appmanifest.org/). To learn more about app manifests read [this page on MDN about them](https://developer.mozilla.org/docs/Apps/Manifest).
 
 <<[Memos manifest file (*manifest.webapp*)](code/memos/manifest.webapp)
 
-Lets review the fields from the manifest above.
+Let's review the fields from the manifest above.
 
 |Field		|Description                                                                        |
 |-----------|-----------------------------------------------------------------------------------|
@@ -37,20 +37,19 @@ Lets review the fields from the manifest above.
 |developer  |Who developed this application 													|
 |icons		|The icons used by the app in many different sizes.									|
 
-The most interesting part of this manifest is the permissions field where we ask for the *storage* permission that allows us to use IndexedDB without size restrictions[^storage-permission] (thanks to that permission we can store as many notes as we want - though we sould be mindful not to use too much of the user's disk space!).
+The most interesting part of this manifest is the permissions field where we ask for the *storage* permission that allows us to use IndexedDB without size restrictions[^storage-permission] (thanks to that permission we can store as many notes as we want - though we should be mindful not to use too much of the user's disk space!).
 
 [^storage-permission]: To learn more about permissions read [the page on MDN about app permissions](https://developer.mozilla.org/en-US/docs/Web/Apps/App_permissions).
 
-Now that the manifest is ready lets move on to the HTML.
+Now that the manifest is ready let's move on to the HTML.
 
 ## Building the HTML
 
-Before we start working on the HTML, lets take a brief detour to talk quickly about the [Gaia Building Blocks](http://buildingfirefoxos.com/building-blocks), which are a collection of reusable CSS and JS with the *look and feel* of Firefox OS that we can use on our own apps.
+Before we start working on the HTML, let's take a brief detour to talk quickly about the [Gaia Building Blocks](http://buildingfirefoxos.com/building-blocks), which are a collection of reusable CSS and JS with the *look and feel* of Firefox OS that we can use on our own apps.
 
-Just like on the Web, you're not required to use the *look and feel* of Firefox OS in your own app. Using or not using the Gaia Building Blocks is a personal decision - and a good applications should have it's own distinctive style and user experience. The important thing to understand is that your app will not suffer any type of prejudice or penalty on the Firefox Marketplace by not using the Gaia look and feel. I am using it here because I am not a good designer so ready made UI toolkits appeal to me (its either that or hiring a designer).
+Just like on the Web, you're not required to use the *look and feel* of Firefox OS in your own app. Using or not using the Gaia Building Blocks is a personal decision - and a good applications should have its own distinctive style and user experience. The important thing to understand is that your app will not suffer any type of prejudice or penalty on the Firefox Marketplace by not using the Gaia look and feel. I am using it here because I am not a good designer so ready made UI toolkits appeal to me (it's either that or hiring a designer).
 
-The HTML structure that we use in this application was built following the patterns adopted by the Gaia Building Blocks where each screen is a `<section>` and the elements follow a predefined format. If you haven't already, download the source code from the [memos repository]
-(https://github.com/soapdog/memos-for-firefoxos) so that you have the files (including the Building Blocks) to use. For those not confident with git and GitHub, the files are also available as a [.zip file](https://github.com/soapdog/memos-for-firefoxos/archive/master.zip). 
+The HTML structure that we use in this application was built following the patterns adopted by the Gaia Building Blocks where each screen is a `<section>` and the elements follow a predefined format. If you haven't already, download the source code from the [memos repository](https://github.com/soapdog/memos-for-firefoxos) so that you have the files (including the Building Blocks) to use. For those not confident with git and GitHub, the files are also available as a [.zip file](https://github.com/soapdog/memos-for-firefoxos/archive/master.zip). 
 
 W> Warning: The version of the Gaia Building Blocks I used for this app is not the most up-to-date available from Mozilla. Trying to update to the current version will, unfortunately, break the Memos app. In your own projects, however, always use the latest version of the Gaia Building Blocks.
 
@@ -58,7 +57,7 @@ W> Warning: The version of the Gaia Building Blocks I used for this app is not t
 
 Before doing anything else copy the **shared** and the **styles** folders that you obtained by downloading the Memos repository to the **memos** folder you created. This will allow use to use the Gaia Building Blocks in our app. 
 
-Lets begin our **index.html** files by including the needed bits.
+Let's begin our **index.html** files by including the needed bits.
 
 ~~~~~~~~
 <!DOCTYPE html>
@@ -81,7 +80,7 @@ On *line 01* we declare the DOCTYPE as HTML5. From *line 05 up to 15* we include
 
 ### Building the main screen
 
-Now we can start building the various screens. As mentioned earlier, each screen used by our app is a `<section>` inside the HTML `<body>`. The body tag must have an attribute *role* with its value equal to *application* because that is used by the CSS selectors to build the interface, so our body tag will be `<body role="application">`. Lets build the first screen and declare our body tag as well.
+Now we can start building the various screens. As mentioned earlier, each screen used by our app is a `<section>` inside the HTML `<body>`. The body tag must have an attribute *role* with its value equal to *application* because that is used by the CSS selectors to build the interface, so our body tag will be `<body role="application">`. Let's build the first screen and declare our body tag as well.
 
 ~~~~~~~~
 <body role="application">
@@ -101,7 +100,7 @@ Our screen has a `<header>` containing a button to add new notes and the applica
 
 Be aware that each screen is a fairly straight forward HTML chunk. Building these same screens in many languages usually requires a lot more work. All we're doing is declaring our containers and giving them IDs when we need to reference them later.
 
-Now that the main screen is done, lets build the editing screen.
+Now that the main screen is done, let's build the editing screen.
 
 ### Building the editing screen
 
@@ -350,7 +349,7 @@ function newMemo() {
 }
 ~~~~~~~~
 
-At the beginning we declare some global variables (yuck!!!) to hold references to some DOM Elements that we want to use later inside some functions. The most interesting global is `currentMemo` which is an object that holds the current note that the user is reading.
+At the beginning we declare some global variables (yuck!!!) to hold references to some DOM elements that we want to use later inside some functions. The most interesting global is `currentMemo` which is an object that holds the current note that the user is reading.
 
 The `showMemoDetail()` and `displayMemo()` functions work together. The first one loads the selected note into the `currentMemo` and manipulates the CSS of the elements so that the editing screen is shown. The second one picks the content from the `currentMemo` variable and places it on the screen. We could do both things on the same function but having them separate makes it easier to experiment with new implementations.
 
@@ -488,7 +487,7 @@ If everything works as expected you will see the Memos app on the list of apps.
 
 When you add a new application, the simulator will launch with your new app running - allowing you to test it. Now you can test all the features for Memos. 
 
-Congratulations! you created and tested your first app. Its not a complex or revolutionary app - but I hope it helped you understand the development workflow of FireFox OS. As you can see, it's not very different from standard Web development.  
+Congratulations! You created and tested your first app. It's not a complex or revolutionary app - but I hope it helped you understand the development workflow of FireFox OS. As you can see, it's not very different from standard Web development.  
 
 Remember that whenever you alter some of the source files you need to press the **Refresh** button to update the copy of the app that is stored on the simulator.
 

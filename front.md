@@ -14,7 +14,7 @@ To Google for the Google Summer of Code 2013! This program is wonderful.
 
 ## This book is in perpetual beta
 
-My plan is to update this book often, expanding its contents and revising the text as issues are found by readers. Since some APIs are still being implemented by Firefox OS, you will want to make sure you're reading an up to date version of this book.
+My plan is to update this book often, expanding its contents and revising the text as issues are found by readers. Since some APIs are still being implemented by Firefox OS, you will want to make sure you're reading an up-to-date version of this book.
 
 ## Me, myself, and I
 

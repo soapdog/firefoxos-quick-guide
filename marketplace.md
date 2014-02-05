@@ -10,7 +10,7 @@ To place your apps on the marketplace you need to be identified via [Mozilla Per
 
 All applications that are submitted to the marketplace go through an approval process (less scary than it sounds!). Hosted web applications go through a lighter process than privileged apps because they use less sensitive APIs. Before sending your application to the marketplace check out [the marketplace review criteria](https://developer.mozilla.org/en-US/docs/Web/Apps/Publishing/Marketplace_review_criteria). The most important parts are (IMHO): 
 
-* Firefox OS devices do not have a **back button** like Android and your desktop browser. If the user navigates to a screen inside your app where there is no way for them to get back to the previous place  (i.e., the user gets stuck), your app will be rejected.
+* Firefox OS devices do not have a **back button** like Android and your desktop browser. If the user navigates to a screen inside your app where there is no way for them to get back to the previous place  (i.e. the user gets stuck), your app will be rejected.
 * Your app should have a 60x60 icon and clear descriptions.
 * Your app should do what the description says. Saying one thing and providing something else will get your app rejected.
 * If your app asks for a given permission then you should use it somewhere in your code. Flagging your application as a privileged app and not using any privileged app API will cause your app to be rejected with a request that you submit again as a plain app.
@@ -23,7 +23,7 @@ There are other criteria discussed in the link above - and the rules can change 
 
 The steps required to submit your application to the marketplace are different depending on whether it's a hosted or a packaged app. For a hosted app, it  just needs to be accessible on the Internet with the correct MIME type and manifest in place. Packaged apps need to be compressed using *zip* and deserve some extra attention. 
 
-Many developers make the mistake of selecting the folder containing the application files and zipping it. This causes the zip file to contain a folder and this folder to contain the app. This is not the correct way to zip a Firefox OS application. The correct way is to zip the files and folders needed so that the manifest is on the *root level* of the zip file. On Mac OS X and Linux you can use the terminal to navigate to your application folder and use a command such as `zip -r myapp.zip *` to compress things correctly as shown on the screen shot below.
+Many developers make the mistake of selecting the folder containing the application files and zipping it. This causes the zip file to contain a folder and this folder to contain the app. This is not the correct way to zip a Firefox OS application. The correct way is to zip the files and folders needed so that the manifest is on the *root level* of the zip file. On Mac OS X and Linux you can use the terminal to navigate to your application folder and use a command such as `zip -r myapp.zip *` to compress things correctly as shown on the screenshot below.
 
 ![Correctly zipping the files](images/originals/marketplace-preparing-packaged-app.png)
 
