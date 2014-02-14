@@ -13,5 +13,5 @@ getphoto.onsuccess = function () {
 };
 
 getphoto.onerror = function () { 
-	// erro!
+	// error!
 };

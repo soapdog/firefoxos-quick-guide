@@ -28,6 +28,6 @@ W> Warning: I have the impression that packaged app installation outside of the 
 
 ## Summary
 
-This chapter discussed options for distributing applications outside of the Firefox Marketplace by using the installation and management APIs for *Open Web Apps*. There are many other routines available to do things such as checking if your application is installed (so that you can hide that *Click Here To Install* button). To learn more about those APIs check out the [MDN page about application installation](https://developer.mozilla.org/docs/Apps/JavaScript_API) (yes, gave you this link before - this time, click it! there is important stuff there).
+This chapter discussed options for distributing applications outside of the Firefox Marketplace by using the installation and management APIs for *Open Web Apps*. There are many other routines available to do things such as checking if your application is installed (so that you can hide that *Click Here To Install* button). To learn more about those APIs check out the [MDN page about application installation](https://developer.mozilla.org/docs/Apps/JavaScript_API) (yes, gave you this link before - this time, click it! There is important stuff there).
 
 In the next chapter we're going to learn how to distribute our apps through the Firefox Marketplace.

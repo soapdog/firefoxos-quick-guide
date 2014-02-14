@@ -4,7 +4,7 @@
 
 ![Firefox OS](images/originals/firefox_os_simulator.png)
 
-[Firefox OS](http://www.mozilla.org/firefox/os/) is a new mobile platform developed by [Mozilla](http://mozilla.org) and its partners. Devices running Firefox OS are already available in many countries and will reach even more places by the end of this year.
+[Firefox OS](http://www.mozilla.org/firefox/os/) is a new mobile platform developed by [Mozilla](http://mozilla.org) and its partners. Devices running Firefox OS are already available in many countries and will reach even more places by the end of 2013.
 
 Targeted at developing markets, Firefox OS has the mission to bring the next billion people online. To achieve this, Firefox OS devices are built to serve as a *great first smartphone* along with competitive pricing. Firefox OS devices should not be compared with high-end smartphones such as the Apple iPhone 5S and Samsung Galaxy S4; they are built to be an alternative to feature phones so that people using said devices are able to upgrade to a Firefox OS one at an affordable cost and receive the *full smartphone experience*.
 
@@ -14,7 +14,7 @@ Another differentiating factor of Firefox OS is its openness. Consider that the 
 
 Besides locking the developers to proprietary distribution channels, these systems lock you to their software development kits (SDKs). If you want to build a native app for both iOS and Android using the official toolkits you will need to code one app using Objective-C and another with Java respectively. This means that, code-wise, a developer will reuse very little between projects (and maybe reuse some media assets). That kind of effort requires that the developer learns two languages and build the same software twice. 
 
-Firefox OS differentiates itself by using "HTML5" as the development platform. HTML5 is a marketing term used to mean the ever-evolving collection of Web standards known as HTML, CSS and JavaScript. These royalty free standards are implemented by the major web browsers, and are what make web applications possible. By leveraging the technologies that encompass HTML5, millions of web developers are already able to code for FireFox OS. And apps built for FireFox OS are easy to port to another platform by using wrappers such as [Phonegap](http://phonegap.com).
+Firefox OS differentiates itself by using "HTML5" as the development platform. HTML5 is a marketing term used to mean the ever-evolving collection of Web standards known as HTML, CSS and JavaScript. These royalty free standards are implemented by the major web browsers, and are what make web applications possible. By leveraging the technologies that encompass HTML5, millions of web developers are already able to code for Firefox OS. And apps built for Firefox OS are easy to port to another platform by using wrappers such as [Phonegap](http://phonegap.com).
 
 ## The Platform That HTML5 Deserves
 
