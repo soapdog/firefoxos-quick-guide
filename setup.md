@@ -19,9 +19,9 @@ To develop and test apps made for Firefox OS you will need:
 
 After installing Firefox, the next step is the installation of the Firefox OS Simulator that will be used to test our applications. With Firefox installed and running, go to the **Tools** menu and select **Add-ons**.
 
-![*Tools* menu with *Add-ons** menu selected](images/originals/tools.png)
+![*Tools* menu with *Add-ons* menu selected](images/originals/tools.png)
 
-Using the search box on the top right corner, search for **Firefox OS Simulator** and install the add-on by clicking the install button.
+Using the search box on the top right corner, search for **Firefox OS Simulator** and install the add-on by clicking the Install button.
 
 ![Add-on manager showing the simulator add-on](images/originals/addons-simulator.png)
 
@@ -29,7 +29,7 @@ After the installation of the add-on, you will be able to access the simulator b
 
 ![Where you can find the simulator after is installed](images/originals/tools-web-developer-simulator.png)
 
-Alternatively, you can navigate to the [Firefox OS Simulator](https://addons.mozilla.org/en-US/firefox/addon/firefox-os-simulator/) addon page, and download the simulator from there. 
+Alternatively, you can navigate to the [Firefox OS Simulator](https://addons.mozilla.org/en-US/firefox/addon/firefox-os-simulator/) Add-ons page, and download the simulator from there. 
 
 ## Summary
 

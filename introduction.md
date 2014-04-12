@@ -26,11 +26,11 @@ Firefox OS is in essence, an extension of the mobile web. By making HTML5 a firs
 
 Some earlier platforms also tried to create operating systems that used web technologies for app creation. For example, when the iPhone was introduced to the world, the only way to create apps was using web technologies. However, those web apps were limited in that they had no hardware or device access - meaning that only a limited range of applications could be built. When Apple then allowed developers to code apps in Objective-C, and also access the device's capabilities, it spurred a huge amount of innovation. Sadly, web apps did not gain access to the device's capabilities, and were thus left as "second-class citizens" - this made them unattractive to both users and developers alike, and unable to compete with native apps in that system.
 
-When we say device capabilities we actually mean accessing hardware and OS level features and services: We're talking about things such as updating the address book, sending SMS, and accessing the camera and media gallery. On Firefox OS, the [WebAPI](https://wiki.mozilla.org/WebAPI)s are the means by which you will access many of those capabilities. 
+When we say device capabilities we actually mean accessing hardware and OS level features and services: we're talking about things such as updating the address book, sending SMS, and accessing the camera and media gallery. On Firefox OS, the [WebAPI](https://wiki.mozilla.org/WebAPI)s are the means by which you will access many of those capabilities. 
 
 Another earlier platform, WebOS, also offered hardware access via JavaScript but never tried to standardize its APIs. Mozilla is working with the W3C and other stakeholders to make sure that the WebAPIs are an open standard and that other browsers adopt them too. As these APIs are implemented by other browsers, your apps will require less and less changes to work across different platforms.
 
-It's important to emphasize that the WebAPIs are not exclusive to Firefox OS devices. Mozilla is implementing it for the other platforms on which Firefox runs, such as desktop and android. This way, you can use your *open web app* in Firefox OS, Firefox on the desktop and Firefox for Android.
+It's important to emphasize that the WebAPIs are not exclusive to Firefox OS devices. Mozilla is implementing it for the other platforms on which Firefox runs, such as desktop and Android. This way, you can use your *open web app* in Firefox OS, Firefox on the desktop and Firefox for Android.
 
 ## Freedom to Develop and Distribute
 
