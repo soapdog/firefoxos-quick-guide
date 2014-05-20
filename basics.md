@@ -44,7 +44,7 @@ Above I mentioned that appcache can be problematic (which is sometimes required 
 
 In this book we're going to build packaged apps, as it will allow us to explore what is possible with the WebAPIs. However, most of what we will learn about manifests applies to hosted apps. If you want to know more about distributing hosted apps, check [the hosted applications link at the developer hub](https://marketplace.firefox.com/developers/docs/hosted).
 
-[^js-tools]: There are many useful tools out there, check out [Grunt](gruntjs.com), [Volo](http://volojs.org/), [Yeoman](http://yeoman.io/), [Bower](http://bower.io/). There is a lot of overlap among these tools, its a matter of preference which one you use. (I like Volo more than Grunt mostly because Volofiles are easier for me to read).
+[^js-tools]: There are many useful tools out there, check out [Gulp](https://github.com/gulpjs/gulp), [Grunt](http://gruntjs.com), [Volo](http://volojs.org/), [Yeoman](http://yeoman.io/), [Bower](http://bower.io/). There is a lot of overlap among these tools, its a matter of preference which one you use. (I like Volo more than Grunt mostly because Volofiles are easier for me to read).
 
 Now that we've covered the two types of applications that Firefox OS supports, let's look at the different levels of system access they can have.
 
@@ -102,6 +102,6 @@ Here we see another example of a [WebActivity](https://hacks.mozilla.org/2013/01
 
 ## Summary
 
-In this chapter we saw that, unlike regular web pages, both Firefox OS' hosted apps and packaged apps rely on a manifest file. We also saw that, from a security perspective, packaged apps can be "privileged" or "certified". Only privileged and certified apps can access Mozilla's powerful set of WebAPIs. the WebAPIs are not available to hosted apps or to regular web pages. 
+In this chapter we saw that, unlike regular web pages, both Firefox OS' hosted apps and packaged apps rely on a manifest file. We also saw that, from a security perspective, packaged apps can be "privileged" or "certified". Only privileged and certified apps can access Mozilla's powerful set of WebAPIs. The more sensitive WebAPIs are not available to hosted apps or to regular web pages. 
 
 Now it's about time we get our hands dirty and create an app!

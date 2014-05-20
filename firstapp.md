@@ -484,7 +484,15 @@ window.onload = function () {
 };
 ~~~~~~~
 
-Now all files are ready and we can begin trying our application on the simulator.
+Now all files are ready and we can begin trying our application on the simulator. There are two ways of doing this depending if you're using the **app manager** or the old **Firefox OS 1.1 simulator**. In the following section we'll show both. There will be specific chapters on each technology later.
+
+If you're running **Firefox 29 or newer** then you have the **app manager**, if you're running an older version then you can use the old simulator. The app manager is only able to connect to Firefox OS 1.2+ devices. 
+
+If you have a Firefox OS 1.1 device and you're running Firefox 29 then install the Firefox OS 1.1 simulator version 5.0 available for [Mac OS X](http://ftp.mozilla.org/pub/mozilla.org/labs/r2d2b2g/r2d2b2g-5.0pre7-mac.xpi), [Linux](http://ftp.mozilla.org/pub/mozilla.org/labs/r2d2b2g/r2d2b2g-5.0pre7-linux.xpi) or [Windows](http://ftp.mozilla.org/pub/mozilla.org/labs/r2d2b2g/r2d2b2g-5.0pre7-windows.xpi). If you install this simulator you will be able to follow the instructions for the old Firefox OS 1.1 simulator and be able to connect your device.
+
+If your device running Firefox OS 1.1 is unlocked and able to receive version 1.2 or later then you should upgrade because it will make your life a lot easier. The Geeksphone Keon, Geeksphone Peak and Geeksphone Revolution have daily Firefox OS builds available at [http://downloads.geeksphone.com/](http://downloads.geeksphone.com/). The ZTE Open can also be upgraded following the instructions at [Upgrading your ZTE Open to Firefox 1.1 or 1.2 (fastboot enabled)](https://hacks.mozilla.org/2014/01/upgrading-your-zte-open-to-firefox-1-1-or-1-2-fastboot-enabled/). The LG Fireweb can't be upgraded, if you are like me and don't like this then go bug LG to open their device on Twitter. The Alcatel One Touch Fire can be unlocked but there are no easy upgrade path, you will need to build/compile your own version of Firefox OS and this type of task is beyond this book.
+
+W>Notice: This [bug request #1001590](https://bugzilla.mozilla.org/show_bug.cgi?id=1001590) on bugzilla will fix the current problem of not being able to run the Firefox OS 1.1 simulator on Firefox 29.
 
 ## Testing the app on the simulator
 

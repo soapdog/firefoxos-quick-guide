@@ -6,5 +6,6 @@ firstapp.md
 devtools.md
 simulator.md
 distribution.md
+appmanager.md
 marketplace.md
 back.md
