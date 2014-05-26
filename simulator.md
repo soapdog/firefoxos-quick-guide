@@ -2,11 +2,16 @@
 
 ![Firefox OS Simulator Dashboard](images/originals/simulator-dashboard.png)
 
+W>Attention: This chapter is here for compatibility with devices running Firefox OS 1.1. The current method for testing and debugging apps is the **App Manager** which we talked about in the previous chapter. The content of this chapter is just for people testing stuff on Firefox OS version 1.1.
+
+W>Attention: If you're running **Firefox 29 or newer** and you have a device running **Firefox OS 1.1 or earlier** then you will need another version of the **Firefox OS 1.1 Simulator** that is not currently listed on the add-ons marketplace. This version is **BETA** but its the best we've got right now. You can fetch it for [Mac OS X](http://ftp.mozilla.org/pub/mozilla.org/labs/r2d2b2g/r2d2b2g-5.0pre7-mac.xpi), [Linux](http://ftp.mozilla.org/pub/mozilla.org/labs/r2d2b2g/r2d2b2g-5.0pre7-linux.xpi) or [Windows](http://ftp.mozilla.org/pub/mozilla.org/labs/r2d2b2g/r2d2b2g-5.0pre7-windows.xpi). Just drop the xpi file on Firefox and follow the installation instructions. If you want to follow up on the quest of making the **Firefox OS 1.1 simulator** work on **Firefox 29** then check out [bug request #1001590 it](https://bugzilla.mozilla.org/show_bug.cgi?id=1001590).
+
+
 We've installed the Firefox OS Simulator in [the chapter about preparing the environment](#setup) and we used it on the [chapter about building our first app](#firstapp). Now we're going to take a deeper look into the simulator features and learn how to do the most common tasks.
 
 To learn more about it, check out [the Firefox OS Simulator documentation](https://developer.mozilla.org/en-US/docs/Tools/Firefox_OS_Simulator) on MDN.
 
-Remember that if you are using a device running Firefox OS 1.2+ then you need to use the app manager with it and not the Firefox OS Simulator. The app manager is described in the next chapter.
+Remember that if you are using a device running Firefox OS 1.2+ then you need to use the App Manager with it and not the Firefox OS Simulator. The App Manager was described in the previous chapter.
 
 ## Adding Apps
 

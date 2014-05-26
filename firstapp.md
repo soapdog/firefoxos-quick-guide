@@ -2,9 +2,9 @@
 
 ![Memos, a minimalist notepad app](images/originals/memos-app.png)
 
-In this chapter we're going to build a simple **Memos** application, which is an application for taking notes. Before coding, let's review how this app works. 
+In this chapter we're going to build a simple **Memos** application, which is an application for taking notes. Before coding, let's review how this app works.
 
-The app has three screens. The first one is the main screen and has a list of your stored notes by title. When you click a note (or add a new one) you're moved to the detail screen that allows you to edit the content and title of the given note. This is shown in the figure below. 
+The app has three screens. The first one is the main screen and has a list of your stored notes by title. When you click a note (or add a new one) you're moved to the detail screen that allows you to edit the content and title of the given note. This is shown in the figure below.
 
 ![Memos, editing screen](images/originals/memos-editing-screen.png)
 
@@ -49,13 +49,13 @@ Before we start working on the HTML, let's take a brief detour to talk quickly a
 
 Just like on the Web, you're not required to use the *look and feel* of Firefox OS in your own app. Using or not using the Gaia Building Blocks is a personal decision - and a good applications should have its own distinctive style and user experience. The important thing to understand is that your app will not suffer any type of prejudice or penalty on the Firefox Marketplace by not using the Gaia look and feel. I am using it here because I am not a good designer so ready made UI toolkits appeal to me (it's either that or hiring a designer).
 
-The HTML structure that we use in this application was built following the patterns adopted by the Gaia Building Blocks where each screen is a `<section>` and the elements follow a predefined format. If you haven't already, download the source code from the [memos repository](https://github.com/soapdog/memos-for-firefoxos) so that you have the files (including the Building Blocks) to use. For those not confident with git and GitHub, the files are also available as a [.zip file](https://github.com/soapdog/memos-for-firefoxos/archive/master.zip). 
+The HTML structure that we use in this application was built following the patterns adopted by the Gaia Building Blocks where each screen is a `<section>` and the elements follow a predefined format. If you haven't already, download the source code from the [memos repository](https://github.com/soapdog/memos-for-firefoxos) so that you have the files (including the Building Blocks) to use. For those not confident with git and GitHub, the files are also available as a [.zip file](https://github.com/soapdog/memos-for-firefoxos/archive/master.zip).
 
 W> Warning: The version of the Gaia Building Blocks I used for this app is not the most up-to-date available from Mozilla. Trying to update to the current version will, unfortunately, break the Memos app. In your own projects, however, always use the latest version of the Gaia Building Blocks.
 
 ### Including the Building Blocks
 
-Before doing anything else copy the **shared** and the **styles** folders that you obtained by downloading the Memos repository to the **memos** folder you created. This will allow use to use the Gaia Building Blocks in our app. 
+Before doing anything else copy the **shared** and the **styles** folders that you obtained by downloading the Memos repository to the **memos** folder you created. This will allow use to use the Gaia Building Blocks in our app.
 
 Let's begin our **index.html** files by including the needed bits.
 
@@ -150,10 +150,10 @@ The editing screen is a bit more complex because it also holds the dialog box us
 </section>
 ~~~~~~~~
 
-At the top of the screen, represented by the `<header>` element, we have: 
+At the top of the screen, represented by the `<header>` element, we have:
 
- * a back button to return to the main screen, 
- * a text entry field that is used to hold the title of the given note, 
+ * a back button to return to the main screen,
+ * a text entry field that is used to hold the title of the given note,
  * and a button that is used to share the note over email.
 
 Below the top toolbar, we have a paragraph holding a `<textarea>` that holds the content of the note and then another toolbar with a trashcan button used to delete the current viewed note.
@@ -366,7 +366,7 @@ At the beginning we declare some global variables (yuck!!!) to hold references t
 
 The `showMemoDetail()` and `displayMemo()` functions work together. The first one loads the selected note into the `currentMemo` and manipulates the CSS of the elements so that the editing screen is shown. The second one picks the content from the `currentMemo` variable and places it on the screen. We could do both things on the same function but having them separate makes it easier to experiment with new implementations.
 
-The `shareMemo()` function uses a [WebActivity](https://hacks.mozilla.org/2013/01/introducing-web-activities/) to open the email application with a new message pre-filled with the selected notes content. 
+The `shareMemo()` function uses a [WebActivity](https://hacks.mozilla.org/2013/01/introducing-web-activities/) to open the email application with a new message pre-filled with the selected notes content.
 
 The `textChanged()` function picks the data from the entry fields and place them into the `currentMemo` object and then saves the note. This is done because the application is an `auto-save` app where your content is always saved. All alterations on the content or title of the note will trigger this function and the note will always be saved on the IndexedDB storage.
 
@@ -484,15 +484,46 @@ window.onload = function () {
 };
 ~~~~~~~
 
-Now all files are ready and we can begin trying our application on the simulator. There are two ways of doing this depending if you're using the **app manager** or the old **Firefox OS 1.1 simulator**. In the following section we'll show both. There will be specific chapters on each technology later.
+Now all files are ready and we can begin trying our application on the simulator. There are two ways of doing this depending if you're using the **App Manager** or the old **Firefox OS 1.1 simulator**. In the following section we'll show both. There will be specific chapters on each technology later.
 
-If you're running **Firefox 29 or newer** then you have the **app manager**, if you're running an older version then you can use the old simulator. The app manager is only able to connect to Firefox OS 1.2+ devices. 
+If you're running **Firefox 29 or newer** then you have the **App Manager**, if you're running an older version then you can use the old simulator. Be aware that the App Manager is only able to connect to Firefox OS 1.2+ devices.
 
 If you have a Firefox OS 1.1 device and you're running Firefox 29 then install the Firefox OS 1.1 simulator version 5.0 available for [Mac OS X](http://ftp.mozilla.org/pub/mozilla.org/labs/r2d2b2g/r2d2b2g-5.0pre7-mac.xpi), [Linux](http://ftp.mozilla.org/pub/mozilla.org/labs/r2d2b2g/r2d2b2g-5.0pre7-linux.xpi) or [Windows](http://ftp.mozilla.org/pub/mozilla.org/labs/r2d2b2g/r2d2b2g-5.0pre7-windows.xpi). If you install this simulator you will be able to follow the instructions for the old Firefox OS 1.1 simulator and be able to connect your device.
 
-If your device running Firefox OS 1.1 is unlocked and able to receive version 1.2 or later then you should upgrade because it will make your life a lot easier. The Geeksphone Keon, Geeksphone Peak and Geeksphone Revolution have daily Firefox OS builds available at [http://downloads.geeksphone.com/](http://downloads.geeksphone.com/). The ZTE Open can also be upgraded following the instructions at [Upgrading your ZTE Open to Firefox 1.1 or 1.2 (fastboot enabled)](https://hacks.mozilla.org/2014/01/upgrading-your-zte-open-to-firefox-1-1-or-1-2-fastboot-enabled/). The LG Fireweb can't be upgraded, if you are like me and don't like this then go bug LG to open their device on Twitter. The Alcatel One Touch Fire can be unlocked but there are no easy upgrade path, you will need to build/compile your own version of Firefox OS and this type of task is beyond this book.
+If your device running Firefox OS 1.1 is unlocked and able to receive version 1.2 or later then you should upgrade because it will make your life a lot easier. The Geeksphone Keon, Geeksphone Peak and Geeksphone Revolution have daily Firefox OS builds available at [http://downloads.geeksphone.com/](http://downloads.geeksphone.com/). The ZTE Open can also be upgraded following the instructions at [Upgrading your ZTE Open to Firefox 1.1 or 1.2 (fastboot enabled)](https://hacks.mozilla.org/2014/01/upgrading-your-zte-open-to-firefox-1-1-or-1-2-fastboot-enabled/). The LG Fireweb can't be upgraded, if you are like me and don't like this then go bug LG to open/upgrade their device on Twitter. The Alcatel One Touch Fire can be unlocked but this type of instruction is beyond this book.
 
 W>Notice: This [bug request #1001590](https://bugzilla.mozilla.org/show_bug.cgi?id=1001590) on bugzilla will fix the current problem of not being able to run the Firefox OS 1.1 simulator on Firefox 29.
+
+## Testing the app with the App Manager
+
+Before we try our application on the simulator we'd better check out if the files are in the correct place. Your memos folder should look like this one:
+
+![List of files used by Memos](images/originals/memos-file-list.png)
+
+If you have a hunch that you wrote something wrong, just compare your version with the one on [the memos github repository](https://github.com/soapdog/memos-for-firefoxos) (There is also a copy of the source code in a folder called **code** on the [book repository](https://github.com/soapdog/guia-rapido-firefox-os) ).
+
+To open the *Simulator Dashboard* go to the menu for **Tools -> Web Developer -> App Manager**.
+
+![Where you can find the App Manager](images/originals/locate-app-manager.png)
+
+With the App Manager open, click the **Add Packaged App** option on the **Apps tab** and browse to where you placed the memos files and select that folder.
+
+![Adding a new app](images/originals/app-manager-add-packaged-app.png)
+
+If everything works as expected you will see the Memos app on the list of apps.
+
+![Memos showing on the App Manager](images/originals/app-manager-showing-memos.png)
+
+After adding your application, click the **Start Simulator** button and run one of your installed simulators. If you haven't installed any simulator yet, I suggest you follow the instructions on screen and install them all.
+
+With the Simulator running press the **Update** button on the memos listing on the **App Manager** to install memos on the running Simulator. After the installation the memos icon will appear at the Simulator home screen. You can just click it to run your app.
+
+
+![Memos installed on the Simulator](images/originals/app-manager-updating-memos.png)
+
+Congratulations! You created and tested your first app. It's not a complex or revolutionary app - but I hope it helped you understand the development workflow of Firefox OS. As you can see, it's not very different from standard Web development.  
+
+Remember that whenever you alter some of the source files you need to press the **Update** button to update the copy of the app that is stored on the running Simulator.
 
 ## Testing the app on the simulator
 
@@ -514,7 +545,7 @@ If everything works as expected you will see the Memos app on the list of apps.
 
 ![Memos showing on the dashboard](images/originals/memos-on-dashboard-display.png)
 
-When you add a new application, the simulator will launch with your new app running - allowing you to test it. Now you can test all the features for Memos. 
+When you add a new application, the simulator will launch with your new app running - allowing you to test it. Now you can test all the features for Memos.
 
 Congratulations! You created and tested your first app. It's not a complex or revolutionary app - but I hope it helped you understand the development workflow of Firefox OS. As you can see, it's not very different from standard Web development.  
 
@@ -523,4 +554,3 @@ Remember that whenever you alter some of the source files you need to press the 
 ## Summary
 
 In this chapter we built our first application for Firefox OS and saw it running on the simulator. In the next chapter we're going to check out the developer tools that comes bundled with Firefox, they will make your life a lot easier when developing applications.
-

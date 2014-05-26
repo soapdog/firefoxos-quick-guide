@@ -4,6 +4,7 @@ setup.md
 basics.md
 firstapp.md
 devtools.md
+appmanager.md
 simulator.md
 distribution.md
 marketplace.md

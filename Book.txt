@@ -4,8 +4,8 @@ setup.md
 basics.md
 firstapp.md
 devtools.md
+appmanager.md
 simulator.md
 distribution.md
-appmanager.md
 marketplace.md
 back.md

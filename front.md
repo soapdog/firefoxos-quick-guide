@@ -80,6 +80,11 @@ I welcome all help to translate this book to even more languages (and to fix my 
 
 ## Version history
 
+### Version 0.3
+Added new content for **App Manager**. Since most of the current devices still running **Firefox OS 1.1** we're keeping the old simulator stuff.
+
+This version was done as a quick update to include the App Manager section. This section will be improved in the next releases. If you find anything wrong with this new section (or any section) then please report the issues at [issue tracker on GitHub](https://github.com/soapdog/firefoxos-quick-guide/issues).
+
 ### Version 0.2
 Book was revised by Marcos Caceres of Mozilla's WebAPI team. The content of each chapter was checked for technical correctness, and many grammatical mistakes and typos were fixed throughout.
 
