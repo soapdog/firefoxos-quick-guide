@@ -55,7 +55,7 @@ W> Warning: The version of the Gaia Building Blocks I used for this app is not t
 
 ### Including the Building Blocks
 
-Before doing anything else copy the **shared** and the **styles** folders that you obtained by downloading the Memos repository to the **memos** folder you created. This will allow use to use the Gaia Building Blocks in our app.
+Before doing anything else copy the **shared** and the **style** folders that you obtained by downloading the Memos repository to the **memos** folder you created. This will allow use to use the Gaia Building Blocks in our app.
 
 Let's begin our **index.html** files by including the needed bits.
 
